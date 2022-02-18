@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all action buttons */
+        button {
+            background-color: mediumseagreen;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        /* Extra styles for the first login button specifically */
+        .firstLogin {
+            left: 50%;
+        }
+
+        /* Extra styles for the cancel button specifically */
+        .cancelBtn {
+            margin-left: 16px;
+            background-color: red;
+            text-align: center;
+        }
+
+        /* Center the close (X) button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        .loginBox {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* The infoBox (background) */
+        .infoBox {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: black;
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* infoBox Content/Box */
+        .infoBox-content {
+            background-color: white;
+            margin: 5% auto 15% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid;
+            border-color: darkgray;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: black;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to the Course Managment System</h1>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="text-align: center;" class="firstLogin">Login</button>
+
+    <div id="id01" class="infoBox">
+
+        <form class="infoBox-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close infoBox">&times;</span>
+            </div>
+
+            <div class="loginBox">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submitInfoBtn">Login</button>
+            </div>
+
+            <div class="container" style="background-color: whitesmoke">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the infoBox
+        var infoBox = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the infoBox, close it
+        window.onclick = function(event) {
+            if (event.target == infoBox) {
+                infoBox.style.display = "none";
+            }
+        }
+    </script>
+
+</body></html>
