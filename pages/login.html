@@ -22,7 +22,7 @@
             box-sizing: border-box;
         }
 
-        /* Set a style for all action buttons on this page */
+        /* Set a style for the two green action buttons on this page */
         button {
             background-color: mediumseagreen;
             color: white;
@@ -40,7 +40,7 @@
 
         /* Extra styles for the first login button specifically */
         .firstLogin {
-            left: 210px;
+            left: 44%;
         }
 
         /* Extra styles for the cancel button specifically */
@@ -51,7 +51,7 @@
         }
 
         /* Center the close (X) button */
-        .imgcontainer {
+        .xBtn {
             text-align: center;
             margin: 24px 0 12px 0;
             position: relative;
@@ -129,7 +129,7 @@
         }
     </style>
 </head>
-
+<!-- End of CSS -->
 <body>
 
     <h1>Welcome to the Course Managment System</h1>
@@ -138,13 +138,13 @@
     <button onclick="document.getElementById('loginMenu').style.display='block'" style="text-align: center;" class="firstLogin">Login</button>
 
 <!--    sign up button trigger-->
-    <button onclick="document.getElementById('signUp').style.display='block'" style="text-align: center;" class="firstLogin">Create Account</button>
+    <button onclick="document.getElementById('signUpMenu').style.display='block'" style="text-align: center;" class="firstLogin">Create Account</button>
 
 <!--login menu-->
     <div id="loginMenu" class="infoBox">
 
         <form class="infoBox-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
+            <div class="xBtn">
                 <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
             </div>
 
@@ -165,11 +165,11 @@
     </div>
 
 <!--sign up menu-->
-    <div id="signUp" class="infoBox">
+    <div id="signUpMenu" class="infoBox">
 
         <form class="infoBox-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close infoBox">&times;</span>
+            <div class="xBtn">
+                <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
             </div>
 
             <div class="loginBox">
@@ -186,19 +186,21 @@
             </div>
 
             <div class="container" style="background-color: whitesmoke">
-                <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('signUpMenu').style.display='none'" class="cancelBtn">Cancel</button>
             </div>
         </form>
     </div>
 
     <script>
-        // Get the infoBox
-        var infoBox = document.getElementById('loginMenu');
+        // Get the menus
+        var loginBox = document.getElementById('loginMenu');
+        var signUpBox = document.getElementById('signUpMenu');
 
-        // When the user clicks anywhere outside of the infoBox, close it
+        // When the user clicks anywhere outside of the login menu, close it
         window.onclick = function(event) {
-            if (event.target == infoBox) {
-                infoBox.style.display = "none";
+            if (event.target == loginBox || event.target == signUpBox) {
+                loginBox.style.display = "none";
+                signUpBox.style.display = "none";
             }
         }
     </script>
