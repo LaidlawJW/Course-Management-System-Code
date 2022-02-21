@@ -22,7 +22,7 @@
             box-sizing: border-box;
         }
 
-        /* Set a style for all action buttons */
+        /* Set a style for all action buttons on this page */
         button {
             background-color: mediumseagreen;
             color: white;
@@ -33,13 +33,14 @@
             position: relative;
         }
 
+        /* change opacity of buttons when hovering over it */
         button:hover {
             opacity: 0.8;
         }
         
         /* Extra styles for the first login button specifically */
         .firstLogin {
-            left: 50%;
+            left: 45%;
         }
 
         /* Extra styles for the cancel button specifically */
@@ -115,7 +116,7 @@
             cursor: pointer;
         }
 
-        /* Change styles for span and cancel button on extra small screens */
+        /* Change styles for login and cancel button on extra small screens */
         @media screen and (max-width: 300px) {
             span.psw {
                 display: block;
@@ -133,13 +134,18 @@
 
     <h1>Welcome to the Course Managment System</h1>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="text-align: center;" class="firstLogin">Login</button>
+<!--    login button trigger-->
+    <button onclick="document.getElementById('loginMenu').style.display='block'" style="text-align: center;" class="firstLogin">Login</button>
+    
+<!--    sign up button trigger-->
+    <button onclick="document.getElementById('signUp').style.display='block'" style="text-align: center;" class="firstLogin">Create Account</button>
 
-    <div id="id01" class="infoBox">
+<!--login menu-->
+    <div id="loginMenu" class="infoBox">
 
         <form class="infoBox-content animate" action="/action_page.php" method="post">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close infoBox">&times;</span>
+                <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
             </div>
 
             <div class="loginBox">
@@ -153,14 +159,41 @@
             </div>
 
             <div class="container" style="background-color: whitesmoke">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelBtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+    
+<!--sign up menu-->
+    <div id="signUp" class="infoBox">
+
+        <form class="infoBox-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('signUp').style.display='none'" class="close" title="Close infoBox">&times;</span>
+            </div>
+
+            <div class="loginBox">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                <label for="psw"><b>Re-type Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submitInfoBtn">Sign up</button>
+            </div>
+
+            <div class="container" style="background-color: whitesmoke">
+                <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
             </div>
         </form>
     </div>
 
     <script>
         // Get the infoBox
-        var infoBox = document.getElementById('id01');
+        var infoBox = document.getElementById('loginMenu');
 
         // When the user clicks anywhere outside of the infoBox, close it
         window.onclick = function(event) {
