@@ -59,11 +59,7 @@
 
         .loginBox {
             padding: 16px;
-        }
-
-        span.psw {
-            float: right;
-            padding-top: 16px;
+            background: white;
         }
 
         /* The infoBox (background) */
@@ -130,65 +126,62 @@
     </style>
 </head>
 <!-- End of CSS -->
+
 <body>
 
     <h1>Welcome to the Course Managment System</h1>
 
-<!--    login button trigger-->
+    <!--    login button trigger-->
     <button onclick="document.getElementById('loginMenu').style.display='block'" style="text-align: center;" class="firstLogin">Login</button>
 
-<!--    sign up button trigger-->
+    <!--    sign up button trigger-->
     <button onclick="document.getElementById('signUpMenu').style.display='block'" style="text-align: center;" class="firstLogin">Create Account</button>
 
-<!--login menu-->
+    <!--login menu-->
     <div id="loginMenu" class="infoBox">
+        <div class="xBtn">
+            <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
+        </div>
 
-        <form class="infoBox-content animate" action="/action_page.php" method="post">
-            <div class="xBtn">
-                <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
-            </div>
+        <div class="loginBox">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <div class="loginBox">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submitInfoBtn">Login</button>
+        </div>
 
-                <button type="submitInfoBtn">Login</button>
-            </div>
-
-            <div class="container" style="background-color: whitesmoke">
-                <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
-            </div>
-        </form>
+        <div class="container" style="background-color: whitesmoke">
+            <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
+        </div>
     </div>
 
-<!--sign up menu-->
+    <!--sign up menu-->
     <div id="signUpMenu" class="infoBox">
 
-        <form class="infoBox-content animate" action="/action_page.php" method="post">
-            <div class="xBtn">
-                <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
-            </div>
+        <div class="xBtn">
+            <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
+        </div>
 
-            <div class="loginBox">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+        <div class="loginBox">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <label for="psw"><b>Re-type Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>Re-type Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submitInfoBtn">Sign up</button>
-            </div>
+            <button type="submitInfoBtn">Sign up</button>
+        </div>
 
-            <div class="container" style="background-color: whitesmoke">
-                <button type="button" onclick="document.getElementById('signUpMenu').style.display='none'" class="cancelBtn">Cancel</button>
-            </div>
-        </form>
+        <div class="container" style="background-color: whitesmoke">
+            <button type="button" onclick="document.getElementById('signUpMenu').style.display='none'" class="cancelBtn">Cancel</button>
+        </div>
+
     </div>
 
     <script>
