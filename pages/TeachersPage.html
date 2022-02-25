@@ -14,8 +14,8 @@
 <body>
     <nav class="nav">
         <div class="nav_items">
-            <a href="#" class="nav_item">
-                Dashboard <i  class="fa-solid fa-bars"></i>
+            <a href="Dashboard_temp.html" class="nav_item">
+                Dashboard <i class="fa-solid fa-bars"></i>
             </a>
             <a class="nav_item" href="#">
                 Classes <i class="fa-solid fa-book"></i>
@@ -23,13 +23,13 @@
             <a class="nav_item" href="#">
                 Completed Work <i class="fa-solid fa-clipboard-check"></i>
             </a>
-            <a class="nav_item" href="#">
+            <a class="nav_item" href="profilePage_temp.html">
                 Profile <i class="fa-solid fa-user"></i>
             </a>
             <a class="nav_item" href="#">
                 Settings <i class="fa-solid fa-gear"></i>
             </a>
-            <a class="nav_logout" href="#">
+            <a class="nav_logout" href="login.html">
                 Logout <i class="fa-solid fa-right-from-bracket"></i>
             </a>
         </div>
@@ -106,7 +106,8 @@
             <div class="card">
                 <input type="checkbox" id="done_box" class="collapsible">
                 <h4 class="card_title">Class Name</h2>
-                    <h6>Due date <span id='date'></span> <span id='missing-done-logo'></span></h4>
+                    <h6>Due date <span id='date'></span> <span id='missing-done-logo'></span>
+                </h4>
                 <p class="card_info">This is the text for the homework</p>
             </div>
         </main>
@@ -119,6 +120,7 @@
     var dt = new Date();
     var NoTimeDate = dt.getFullYear() + '/' + (dt.getMonth() + 1) + '/' + dt.getDate();
     document.getElementById('date').innerHTML = NoTimeDate;
+
 </script>
 
 
