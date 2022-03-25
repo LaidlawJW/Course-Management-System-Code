@@ -1,0 +1,16 @@
+To be done:
+
+Link pages together
+
+Integrate backend database and retrieval/saving
+---
+Finish pages:
+
+Settings
+
+Grades
+
+Admin page (and restricting access to it)
+
+Invite and remove from courses
+
