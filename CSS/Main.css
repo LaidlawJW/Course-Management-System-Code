@@ -311,17 +311,30 @@
     }
     
     .personal-info {
-        background-color: #2677ad;
         padding: 3em;
         border: 0;
         border-radius: 3px;
         text-indent: 70px;
         transition: all .3s ease-in-out;
     }
+
+    .personal-info table{
+        background-color: #555151;
+        padding: 50px;
+        color: #ccc;
+    }
+
+
+    .personal-info td,th{ 
+        text-align: left;
+        padding: 10px;
+        margin: 10px;
+      }
     
     .row {
+        background-color: #2677ad;
         display: flex;
-        justify-content: space-evenly
+        justify-content:center;
     }
     
     .form-control {}
@@ -412,7 +425,6 @@
     
     .profile-img {
         display: flex;
-        background-color: #cf3d3d;
         justify-content: center;
         padding: 3em;
         border-radius: 3px;
@@ -568,3 +580,131 @@
         background-color: #1bd36e;
         color: #292727;
     }
+
+    .prof-classes table{
+        border-collapse: collapse;
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+
+    }
+    .prof-classes{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .prof-classes td,th{ 
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 10px;
+            margin: 10px;
+          }
+    
+    .prof-classes tr{
+        padding: 10px;
+        margin: 10px;
+     }
+    
+     /*--------------------------*/
+    
+    .profile {
+        margin: 2em auto;
+   }
+    .profile h1 {
+        color: #484848;
+        font-weight: 100;
+   }
+    .profile a {
+        color: #1daaff;
+   }
+   .profile a:hover {
+        color: #0072b6;
+   }
+    .profile {
+        max-width: 500px;
+        border: 1px solid #e1e1e1;
+        border-radius: 20px;
+        padding: 2em;
+        margin: 1em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        position: relative;
+   }
+    .profile figure {
+        margin: 0;
+   }
+    .profile figure img {
+        max-width: 150px;
+        max-height: 150px;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0px 0px 20px rgba(21, 21, 21, .15);
+   }
+    .profile header h1 {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+   }
+ 
+    .profile main {
+        display: none;
+   }
+    .profile dl {
+        display: block;
+        width: 100%;
+   }
+    .profile  dl dt, .profile  dl dd {
+        float: left;
+        padding: 8px 5px;
+        margin: 0;
+        border-bottom: 1px solid #e1e1e1;
+   }
+    .profile dl dt a, .profile dl dd a {
+        padding-right: 5px;
+   }
+    .profile  dl dt {
+        width: 30%;
+        padding-right: 10px;
+        font-weight: bold;
+   }
+    .profile  dl dt:after {
+        content: ":";
+   }
+    .profile  dl dd {
+        width: 70%;
+   }
+    label {
+        display: block;
+        cursor: pointer;
+   }
+    @media screen and (max-width: 520px) {
+        .profile {
+            padding: 1em;
+            margin: 1em;
+       }
+        .profile img {
+            max-width: 100%;
+            height: auto;
+       }
+        .profile main dl, .profile main dl dt, .profile main dl dd {
+            display: block;
+            width: 100%;
+            float: none;
+       }
+        .profile main dl dt {
+            border-bottom: none;
+       }
+        .profile main dl dd {
+            margin-bottom: 10px;
+       }
+        .profile .toggle {
+            top: 15px;
+            left: 15px;
+       }
+   }
+    
+    
