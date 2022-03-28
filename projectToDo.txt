@@ -1,6 +1,10 @@
 To be done:
 
-Link pages together
+Link pages together and expand side menu
+
+Leave side menu fully shown by default (don't require mouse-over)
+
+Restrict some pages based on user role (student, instructor, etc.)
 
 Integrate backend database and retrieval/saving
 ---
