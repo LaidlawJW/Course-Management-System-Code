@@ -8,10 +8,11 @@
         margin: 0;
         justify-content: center;
         text-decoration: none;
+        text-decoration-color: #7289da;
     }
     
     html {
-        background-color: #e24f4f;
+        background-color: #313233;
         font-family: 'Muli', sans-serif;
         height: 100%;
     }
@@ -23,6 +24,16 @@
     .col-1 {
         background: #D7E8D4;
         flex: 1;
+    }
+    
+    .btn-edit {
+        background-color: #7289da;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
     }
     
     .col-2 {
@@ -49,13 +60,12 @@
     }
     
     .main-prof {
-        /*FLEX STUFF*/
         display: flex;
         flex-direction: column;
         justify-content: start;
         height: 100vh;
         width: 70vw;
-        background-color: rgb(248, 242, 242);
+        background-color: #2c2f33;
         padding: 15px 3px;
     }
     
@@ -67,8 +77,9 @@
         align-items: center;
         min-height: 100vh;
         width: 70vw;
-        background-color: rgb(248, 242, 242);
+        background-color: #2c2f33;
         padding: 15px 3px;
+        color: #cfc6c6;
     }
     
     .cards a {
@@ -100,6 +111,8 @@
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
         transition: all 0.2s;
         overflow: hidden;
+        border: #7289da 1px solid;
+        color: #cfc6c6;
     }
     
     .course-name-science {
@@ -119,7 +132,7 @@
     }
     
     .course-name-social {
-        background-color: #cf3d3d;
+        background-color: #922130;
         color: #fff;
         padding: 10px;
         padding-top: 0;
@@ -135,7 +148,7 @@
     }
     
     .points {
-        border-left: #292727 solid 1px;
+        border-left: #7289da solid 1px;
         margin-left: 20px;
         padding: 10px;
         width: 10%;
@@ -153,11 +166,13 @@
     #PTS {
         font-size: 22px;
         text-decoration: underline;
+        text-decoration-color: #7289da;
     }
     
     #PTS-G {
         font-size: 22px;
         text-decoration: underline;
+        text-decoration-color: #7289da;
     }
     
     .course-info {
@@ -165,6 +180,12 @@
         padding: 0px;
         position: relative;
         width: 80%;
+        color: #cfc6c6;
+    }
+    
+    .course-info h4 {
+        text-decoration: underline;
+        text-decoration-color: #7289da;
     }
     
     .card:hover {
@@ -179,7 +200,7 @@
     .collapsible {
         grid-row: 1/2;
         justify-self: end;
-        color: #fff;
+        color: #cfc6c6;
         cursor: pointer;
         transform: scale(2.0);
         background-color: #eee;
@@ -196,85 +217,102 @@
         font-weight: 400;
     }
     
+    .fa-solid {
+        position: relative;
+        display: table-cell;
+        width: 60px;
+        height: 36px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+    }
+    
+    .nav:hover,
+    nav.nav.expanded {
+        width: 250px;
+        overflow: visible;
+        transition: all .1s linear;
+    }
+    
     .nav {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
         flex: 1;
-        padding: 1em;
-    }
-    
-    .nav_items {
+        padding: 0;
+        background: #292727;
         position: fixed;
         top: 0;
-        left: 0;
-        z-index: 2;
+        bottom: 0;
         height: 100vh;
-        width: 14vw;
-        color: #cfc6c6;
-        background: #292727;
-        transform: translateX(-200px);
-        transition: transform .5s;
-    }
-    
-    .nav--open .nav_items {
-        transform: translateX(0);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .nav a a:visited {
-        text-decoration: none;
-        color: #cfc6c6;
-    }
-    
-    .nav_item {
-        display: flex;
-        align-items: center;
-        color: #cfc6c6;
+        left: 0;
+        width: 60px;
+        overflow: hidden;
+        z-index: 9999;
         font-weight: bold;
-        font-size: 17px;
-        text-decoration: none;
-        padding: 15px 30px;
-        background: transform 0.2s;
     }
     
-    .nav_logout {
-        display: flex;
-        align-items: center;
+    .nav>.out {
+        margin: 10px 0;
+    }
+    
+    .nav .nav_items {
+        position: relative;
+        display: block;
+        width: 250px;
+    }
+    
+    .nav .nav_items>a {
+        position: relative;
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 0;
         color: #cfc6c6;
-        font-weight: bold;
-        font-size: 17px;
         text-decoration: none;
-        padding: 15px 30px;
-        background: transform 0.2s;
+    }
+    
+    .nav .nav-icon {
+        position: relative;
+        display: table-cell;
+        width: 60px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .nav .n-text {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 190px;
+    }
+    
+    .nav>ul.logout {
         position: absolute;
-        width: 14vw;
+        left: 0;
         bottom: 0;
     }
     
-    nav i {
-        margin-left: auto;
-    }
-    
-    .nav_logout:hover {
-        background: #ffffff;
-        color: #d31b1b;
-    }
-    
     .nav_items:hover {
-        transform: translateX(0px);
-        transition: transform .5s;
+        color: #7289da;
     }
     
-    .nav_item--active {
-        color: #d31b77;
-        background: #ffffff;
+    .no-touch .scrollable.hover {
+        overflow-y: hidden;
     }
     
-    .nav_item:hover {
-        background: #ffffff;
-        color: #1bd36e;
+    .no-touch .scrollable.hover:hover {
+        overflow-y: auto;
+        overflow: visible;
+    }
+    
+    .nav ul,
+    .nav_items {
+        outline: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav .nav_items:hover>a {
+        color: #7289da;
     }
     
     .nav_overlay {
@@ -300,14 +338,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #ffffff;
+        color: #cfc6c6;
         height: 5vh;
         padding: 1em;
+        border-bottom: #7289da solid 1px;
+    }
+    
+    footer {
+        border-top: #7289da solid 1px;
     }
     
     aside {
         flex: 6;
-        flex: 0 0 14vw;
+        flex: 14vw;
     }
     
     .personal-info {
@@ -317,24 +360,25 @@
         text-indent: 70px;
         transition: all .3s ease-in-out;
     }
-
-    .personal-info table{
+    
+    .personal-info table {
         background-color: #555151;
         padding: 50px;
         color: #ccc;
     }
-
-
-    .personal-info td,th{ 
+    
+    .personal-info td,
+    th {
         text-align: left;
         padding: 10px;
         margin: 10px;
-      }
+    }
     
     .row {
-        background-color: #2677ad;
+        background-color: #7289da;
         display: flex;
-        justify-content:center;
+        justify-content: center;
+        border-radius: 2%;
     }
     
     .form-control {}
@@ -384,7 +428,7 @@
     }
     
     .prof-card-pic {
-        background-color: #cf3d3d;
+        background-color: #7289da;
         color: #fff;
         padding: 10px;
         max-width: 150px;
@@ -399,7 +443,9 @@
         align-items: center;
         padding-left: 20px;
         text-decoration: underline;
+        text-decoration-color: #7289da;
         padding-right: 10px;
+        color: #cfc6c6;
     }
     
     .prof-card {
@@ -412,15 +458,15 @@
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
         transition: all 0.2s;
         overflow: hidden;
+        border: #7289da 1px solid;
     }
     
     .prof-role {
-        border-left: #292727 solid 1px;
+        border-left: #7289da solid 1px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding-left: 10px;
-        text-decoration: underline;
     }
     
     .profile-img {
@@ -431,22 +477,24 @@
     }
     
     .assigmentArea {
-        border-left: #292727 solid 1px;
+        border-left: #7289da solid 1px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding-left: 10px;
         padding-right: 10px;
         text-decoration: underline;
+        text-decoration-color: #7289da;
+        color: #cfc6c6;
     }
     
     .dateArea {
-        border-left: #292727 solid 1px;
+        border-left: #7289da solid 1px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding-left: 10px;
-        text-decoration: underline;
+        color: #cfc6c6;
     }
     
     .t-cards {
@@ -458,7 +506,7 @@
         align-items: center;
         min-height: 100vh;
         width: 55vw;
-        background-color: rgb(248, 242, 242);
+        background-color: #2c2f33;
         padding: 15px 3px;
     }
     
@@ -474,8 +522,23 @@
         color: #cfc6c6;
     }
     
+    .t-nav_item {
+        display: flex;
+        align-items: center;
+        color: #cfc6c6;
+        font-weight: bold;
+        font-size: 17px;
+        text-decoration: none;
+        padding: 15px 30px;
+        background: transform 0.2s;
+    }
+    
+    .t-nav_item:hover {
+        color: #7289da;
+    }
+    
     .t-cards {
-        background-color: rgb(248, 242, 242);
+        background-color: #2c2f33;
         flex: 4;
     }
     
@@ -494,12 +557,11 @@
     .form-temp {
         display: flex;
         flex-direction: column;
-        justify-self: end;
         justify-content: start;
         align-items: center;
         min-height: 100vh;
         width: 70vw;
-        background-color: rgb(248, 242, 242);
+        background-color: #2c2f33;
         padding: 15px 3px;
     }
     
@@ -511,7 +573,7 @@
         padding: 20px;
         width: 50vw;
         border-radius: 10px;
-        background-color: #e24f4f;
+        background-color: #7289da;
     }
     
     .upload-area {
@@ -521,7 +583,7 @@
         margin: 10px;
         padding: 20px;
         border-radius: 10px;
-        background-color: #e24f4f;
+        background-color: #7289da;
     }
     
     .point-area {
@@ -530,8 +592,9 @@
         border: #292727 1px solid;
         margin: 10px;
         border-radius: 10px;
+        width: 50vw;
         padding: 20px;
-        background-color: #e24f4f;
+        background-color: #7289da;
     }
     
     input[type=text],
@@ -556,7 +619,6 @@
         border: none;
         border-radius: 4px;
     }
-    /* When moving the mouse over the submit button, add a darker green color */
     
     input:hover {}
     
@@ -569,7 +631,7 @@
         background-color: #292727;
         color: #ccc;
         padding: 12px 20px;
-        border: #1bd36e 2px solid;
+        border: #7289da 2px solid;
         font-size: large;
         border-radius: 4px;
         cursor: pointer;
@@ -577,50 +639,54 @@
     }
     
     .btn:hover {
-        background-color: #1bd36e;
+        background-color: #7289da;
         color: #292727;
     }
-
-    .prof-classes table{
+    
+    .prof-classes table {
         border-collapse: collapse;
         width: 80%;
-        padding: 10px;
-        margin: 10px;
-
+        padding: 20px;
+        margin: 40px;
     }
-    .prof-classes{
+    
+    .prof-classes {
         display: flex;
         justify-content: center;
-
     }
-
-    .prof-classes td,th{ 
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 10px;
-            margin: 10px;
-          }
     
-    .prof-classes tr{
+    .prof-classes td,
+    th {
+        border: 2px solid #7289da;
+        color: #cfc6c6;
+        ;
+        text-align: left;
         padding: 10px;
         margin: 10px;
-     }
+    }
     
-     /*--------------------------*/
+    .prof-classes tr {
+        padding: 10px;
+        margin: 10px;
+    }
+    /*--------------------------*/
     
     .profile {
         margin: 2em auto;
-   }
+    }
+    
     .profile h1 {
-        color: #484848;
         font-weight: 100;
-   }
+    }
+    
     .profile a {
-        color: #1daaff;
-   }
-   .profile a:hover {
-        color: #0072b6;
-   }
+        color: #7289da;
+    }
+    
+    .profile a:hover {
+        color: #7289da;
+    }
+    
     .profile {
         max-width: 500px;
         border: 1px solid #e1e1e1;
@@ -633,78 +699,102 @@
         align-items: center;
         align-content: center;
         position: relative;
-   }
+    }
+    
     .profile figure {
         margin: 0;
-   }
+    }
+    
+    .class-head {
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+        margin: 0;
+        padding: 0;
+        color: #ccc;
+        text-decoration-color: #7289da;
+    }
+    
     .profile figure img {
         max-width: 150px;
         max-height: 150px;
         border-radius: 50%;
+        border: #292727 5px solid;
         padding: 10px;
         box-shadow: 0px 0px 20px rgba(21, 21, 21, .15);
-   }
+    }
+    
     .profile header h1 {
         margin: 0;
         padding: 0;
         line-height: 1;
-   }
- 
+    }
+    
     .profile main {
         display: none;
-   }
+    }
+    
     .profile dl {
         display: block;
         width: 100%;
-   }
-    .profile  dl dt, .profile  dl dd {
+    }
+    
+    .profile dl dt,
+    .profile dl dd {
         float: left;
         padding: 8px 5px;
         margin: 0;
         border-bottom: 1px solid #e1e1e1;
-   }
-    .profile dl dt a, .profile dl dd a {
+    }
+    
+    .profile dl dt a,
+    .profile dl dd a {
         padding-right: 5px;
-   }
-    .profile  dl dt {
+    }
+    
+    .profile dl dt {
         width: 30%;
         padding-right: 10px;
         font-weight: bold;
-   }
-    .profile  dl dt:after {
+    }
+    
+    .profile dl dt:after {
         content: ":";
-   }
-    .profile  dl dd {
+    }
+    
+    .profile dl dd {
         width: 70%;
-   }
+    }
+    
     label {
         display: block;
         cursor: pointer;
-   }
+    }
+    
     @media screen and (max-width: 520px) {
         .profile {
             padding: 1em;
             margin: 1em;
-       }
+        }
         .profile img {
             max-width: 100%;
             height: auto;
-       }
-        .profile main dl, .profile main dl dt, .profile main dl dd {
+        }
+        .profile dl,
+        .profile dl dt,
+        .profile dl dd {
             display: block;
             width: 100%;
             float: none;
-       }
-        .profile main dl dt {
+        }
+        .profile dl dt {
             border-bottom: none;
-       }
-        .profile main dl dd {
+        }
+        .profile dl dd {
             margin-bottom: 10px;
-       }
+        }
         .profile .toggle {
             top: 15px;
             left: 15px;
-       }
-   }
-    
-    
+        }
+    }
