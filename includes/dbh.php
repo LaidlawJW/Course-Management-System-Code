@@ -10,7 +10,6 @@ $dbName = "CMS";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 if(!$conn){
-    die("connection failed lmao get good fool" .mysqli_connect_error());
+    die("connection failed" .mysqli_connect_error());
 }
-
-console_log("here");
+?>

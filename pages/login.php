@@ -175,10 +175,10 @@ include_once("../includes/dbh.php");
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <label for="psw"><b>Re-type Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="repeatPsw"><b>Re-type Password</b></label>
+            <input type="password" placeholder="Enter Password" name="repeatPsw" required>
 
-            <button type="submitInfoBtn">Sign up</button>
+            <button type="submitInfoBtn" name = "submitInfoButton">Sign up</button>
         </div>
 
         <div class="container" style="background-color: whitesmoke">
