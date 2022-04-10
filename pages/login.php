@@ -1,5 +1,5 @@
 <?php
-include_once("../includes/dbh.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -163,11 +163,13 @@ include_once("../includes/dbh.php");
 
     <!--sign up menu-->
     <div id="signUpMenu" class="infoBox">
+        
 
         <div class="xBtn">
             <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
         </div>
 
+        <form action ="signup.inc.php" method = "POST">
         <div class="loginBox">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
@@ -180,6 +182,7 @@ include_once("../includes/dbh.php");
 
             <button type="submitInfoBtn" name = "submitInfoButton">Sign up</button>
         </div>
+        </form>
 
         <div class="container" style="background-color: whitesmoke">
             <button type="button" onclick="document.getElementById('signUpMenu').style.display='none'" class="cancelBtn">Cancel</button>

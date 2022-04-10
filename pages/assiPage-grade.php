@@ -85,18 +85,15 @@ include_once("../includes/dbh.php");
         <header>
             <h2>Current Date: <span id='date'></span></h2>
 
-            <h2>Hello <span id='user'>!</span>
+            <h2>Hello
             <?php    
             $sql = "SELECT * FROM main WHERE UserID = 1";
-            $results = mysqli_query($conn,$sql);
-            $resultsCheck = mysqli_num_rows($results);
-
-            while($row = mysqli_fetch_assoc($results)){
-                echo $row['name'];
-
-            }
+            $name = query($conn, $sql);
+            echo $name;
             ?>
+            !
             </h2>
+
             
         </header>
         <main>
