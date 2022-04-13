@@ -142,6 +142,9 @@
 
     <!--login menu-->
     <div id="loginMenu" class="infoBox">
+
+    <form action ="../includes/login.inc.php" method = "POST">
+
         <div class="xBtn">
             <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
         </div>
@@ -159,6 +162,8 @@
         <div class="container" style="background-color: whitesmoke">
             <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
         </div>
+        </form>
+
     </div>
 
     <!--sign up menu-->

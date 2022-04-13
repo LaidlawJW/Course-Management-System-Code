@@ -1,7 +1,6 @@
 <?php
 include_once 'dbh.php';
 include_once 'helper.php';
-console_log(['ass']);
 
 $name = $_POST['uname'];
 $pass = $_POST['psw'];
