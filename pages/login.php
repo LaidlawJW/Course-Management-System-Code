@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,8 @@
 
         /* Full-width input fields */
         input[type=text],
-        input[type=password] {
+        input[type=password],
+        input[type=email] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -153,7 +153,7 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submitInfoBtn">Login</button>
+            <button type="submit">Login</button>
         </div>
 
         <div class="container" style="background-color: whitesmoke">
@@ -169,10 +169,13 @@
             <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
         </div>
 
-        <form action ="signup.inc.php" method = "POST">
+        <form action ="../includes/signup.inc.php" method = "POST">
         <div class="loginBox">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
@@ -180,7 +183,18 @@
             <label for="repeatPsw"><b>Re-type Password</b></label>
             <input type="password" placeholder="Enter Password" name="repeatPsw" required>
 
-            <button type="submitInfoBtn" name = "submitInfoButton">Sign up</button>
+            <label for="type"><b>User Type:</b></label><br>
+
+            <label for="student">Student</label>
+            <input type="radio" value="student" name="type" required> 
+
+            <label for="student">Teacher</label>
+            <input type="radio" value="teacher" name="type" required> 
+
+            <label for="student">Admin</label>
+            <input type="radio" value="admin" name="type" required> 
+
+            <button type="submit">Sign up</button>
         </div>
         </form>
 
