@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -143,6 +144,7 @@
     <!--login menu-->
     <div id="loginMenu" class="infoBox">
 
+    
     <form action ="../includes/login.inc.php" method = "POST">
 
         <div class="xBtn">

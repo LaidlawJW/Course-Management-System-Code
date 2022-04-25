@@ -8,6 +8,9 @@ $pass = $_POST['psw'];
 $_SESSION["uname"] = "$name";
 $_SESSION["pwd"] = "$pwd";
 
+console_log('bet');
+
+
 
 if(isset($_POST["submit"])){
     echo "good good";
