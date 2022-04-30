@@ -15,9 +15,18 @@ console_log('bet');
 if(isset($_POST["submit"])){
     echo "good good";
 
-    $name= $_POST["uname"];
-    $psw= $_POST["pws"];
+    $name = $_POST["uname"];
+    $psw = $_POST["pws"];
+
+    $sql ="SELECT * FROM 'main' WHERE 'name' = $name";
+
+    mysqli_query($conn, $sql);
+
+    
+    
+    header("location: ../pages/assiPage-grade.php");
+
 }
 else{
-    header("location: ../pages/assiPage-grade.php");
+    echo" oh no your web dev is shit";
 }

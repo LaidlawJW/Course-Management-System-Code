@@ -1,5 +1,7 @@
 <?php
 include_once("../includes/dbh.php");
+session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -87,9 +89,11 @@ include_once("../includes/dbh.php");
 
             <h2>Hello
             <?php    
-            $sql = "SELECT * FROM main WHERE UserID = 1";
+            //$sql = "SELECT * FROM main WHERE UserID = 1";
+
             $name = query($conn, $sql);
-            echo $name;
+            //echo $name;
+            echo $_SESSION["uname"];
             ?>
             !
             </h2>

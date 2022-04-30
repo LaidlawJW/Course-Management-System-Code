@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -158,7 +159,7 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button type="submit" name = "submit" >Login</button>
         </div>
 
         <div class="container" style="background-color: whitesmoke">
