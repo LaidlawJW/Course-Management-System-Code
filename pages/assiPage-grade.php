@@ -2,6 +2,7 @@
 include_once("../includes/dbh.php");
 session_start();
 
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,7 @@ session_start();
     <nav class="nav">
         <ul class="out">
             <li class="nav_items">
-                <a href="Dashboard_temp.html">
+                <a href="Dashboard_temp.php">
                     <i class="fa-solid fa-bars"></i>
                     <span class="n-text">
                         Dashboard
@@ -76,9 +77,7 @@ session_start();
             <li class="nav_items">
                 <a href="#">
                     <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="n-text">
-                        Logout
-                    </span>
+                    <span class="n-text">Logout</span>
                 </a>
             </li>
         </ul>
@@ -89,7 +88,7 @@ session_start();
 
             <h2>Hello
             <?php    
-            //$sql = "SELECT * FROM main WHERE UserID = 1";
+            $sql = "SELECT * FROM main WHERE UserID = 1";
 
             $name = query($conn, $sql);
             //echo $name;

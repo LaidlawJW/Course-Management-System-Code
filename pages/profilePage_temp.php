@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<?php
+session_start();
+
+?>
 <html lang="en">
 
 <head>
@@ -16,7 +21,7 @@
     <nav class="nav">
         <ul class="out">
             <li class="nav_items">
-                <a href="Dashboard_temp.html">
+                <a href="Dashboard_temp.php">
                     <i class="fa-solid fa-bars"></i>
                     <span class="n-text">
                       Dashboard
@@ -81,7 +86,12 @@
         <header>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Profile</h2>
-            <h2>Hello <span id='user'>userABC123</span>!</h2>
+            <h2>Hello <span id='user'>
+            <?php
+            echo $_SESSION["uname"];
+
+        
+            ?></span>!</h2>
         </header>
         <main class='main-prof'>
             <div class="container">

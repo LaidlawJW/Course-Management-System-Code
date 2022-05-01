@@ -146,7 +146,7 @@ session_start();
     <div id="loginMenu" class="infoBox">
 
     
-    <form action ="../includes/login.inc.php" method = "POST">
+    <form action ="../pages/Dashboard_temp.php" method = "POST">
 
         <div class="xBtn">
             <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
@@ -177,7 +177,7 @@ session_start();
             <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
         </div>
 
-        <form action ="../includes/signup.inc.php" method = "POST">
+        <form action ="../pages/login.php" method = "POST">
         <div class="loginBox">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>

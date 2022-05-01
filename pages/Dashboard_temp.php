@@ -1,5 +1,15 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
+
+
 <html lang="en">
+
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +26,7 @@
     <nav class="nav">
         <ul class="out">
             <li class="nav_items">
-                <a href="Dashboard_temp.html">
+                <a href="Dashboard_temp.php">
                     <i class="fa-solid fa-bars"></i>
                     <span class="n-text">
                         Dashboard
@@ -26,7 +36,7 @@
             </li>
 
             <li class="nav_items">
-                <a href="profilePage_temp.html">
+                <a href="profilePage_temp.php">
                     <i class="fa-solid fa-book"></i>
                     <span class="n-text">
                         Classes
@@ -68,7 +78,7 @@
 
         <ul class="logout">
             <li class="nav_items">
-                <a href="#">
+                <a href="../includes/signout.inc.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <span class="n-text">
                         Logout
@@ -81,7 +91,14 @@
         <header>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Dashboard</h2>
-            <h2>Hello <span id='user'>userABC123</span>!</h2>
+            <h2>Hello <span id='user'>
+                
+            <?php
+            echo $_SESSION["uname"];
+
+        
+            ?>
+        </span>!</h2>
         </header>
         <main class="cards">
             <div class="card">
