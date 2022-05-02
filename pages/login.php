@@ -4,15 +4,28 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-image: url('../img/login4.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
+        /*title label*/
         h1 {
             text-align: center;
+            color: white;
+        }
+
+        /*format radio buttons*/
+        input[type='radio'] {
+            display: grid;
+            margin-bottom: 15px;
         }
 
         /* Full-width input fields */
@@ -128,6 +141,7 @@ session_start();
                 width: 100%;
             }
         }
+
     </style>
 </head>
 <!-- End of CSS -->
@@ -145,65 +159,64 @@ session_start();
     <!--login menu-->
     <div id="loginMenu" class="infoBox">
 
-    
-    <form action ="../includes/login.inc.php" method = "POST">
+        <form action="../includes/login.inc.php" method="POST">
 
-        <div class="xBtn">
-            <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
-        </div>
+            <div class="xBtn">
+                <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
+            </div>
 
-        <div class="loginBox">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <div class="loginBox">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit" name = "submit" >Login</button>
-        </div>
+                <button type="submit" name="submit">Login</button>
+            </div>
 
-        <div class="container" style="background-color: whitesmoke">
-            <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
-        </div>
+            <div class="container" style="background-color: whitesmoke">
+                <button type="button" onclick="document.getElementById('loginMenu').style.display='none'" class="cancelBtn">Cancel</button>
+            </div>
         </form>
 
     </div>
 
     <!--sign up menu-->
     <div id="signUpMenu" class="infoBox">
-        
+
 
         <div class="xBtn">
             <span onclick="document.getElementById('signUpMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
         </div>
 
-        <form action ="../pages/login.php" method = "POST">
-        <div class="loginBox">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+        <form action="../includes/signup.inc.php" method="POST">
+            <div class="loginBox">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-            <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Enter Email" name="email" required>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <label for="repeatPsw"><b>Re-type Password</b></label>
-            <input type="password" placeholder="Enter Password" name="repeatPsw" required>
+                <label for="repeatPsw"><b>Re-type Password</b></label>
+                <input type="password" placeholder="Enter Password" name="repeatPsw" required>
 
-            <label for="type"><b>User Type:</b></label><br>
+                <label for="type"><b>User Type:</b></label><br>
 
-            <label for="student">Student</label>
-            <input type="radio" value="student" name="type" required> 
+                <label for="student">Student</label>
+                <input type="radio" value="student" name="type" required>
 
-            <label for="student">Teacher</label>
-            <input type="radio" value="teacher" name="type" required> 
+                <label for="student">Teacher</label>
+                <input type="radio" value="teacher" name="type" required>
 
-            <label for="student">Admin</label>
-            <input type="radio" value="admin" name="type" required> 
+                <label for="student">Admin</label>
+                <input type="radio" value="admin" name="type" required>
 
-            <button type="submit">Sign up</button>
-        </div>
+                <button type="submit">Sign up</button>
+            </div>
         </form>
 
         <div class="container" style="background-color: whitesmoke">
@@ -211,7 +224,7 @@ session_start();
         </div>
 
     </div>
-    
+
     <script>
         // Get the menus
         var loginBox = document.getElementById('loginMenu');
@@ -224,6 +237,9 @@ session_start();
                 signUpBox.style.display = "none";
             }
         }
+
     </script>
-    
-</body></html>
+
+</body>
+
+</html>
