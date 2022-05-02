@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <aside></aside>
 <nav class="nav">
         <ul class="out">

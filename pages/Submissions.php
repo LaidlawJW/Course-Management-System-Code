@@ -18,7 +18,7 @@
         <header>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Dashboard</h2>
-            <h2>Hello <span id='user'>userABC123</span>!</h2>
+            <h2>Hello <span id='user'><?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
         <main class="cards">
             <div class="card">
@@ -86,7 +86,7 @@
         </main>
         <footer>Footer</footer>
     </div>
-    <aside>Aside</aside>
+    <aside></aside>
 </body>
 
 <script>

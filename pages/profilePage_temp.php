@@ -41,17 +41,29 @@ session_start();
                         <figure>
                             <img src="../img/photo-man.jpg" />
                         </figure>
-                        <h1>userABC123!</h1>
+                        <h1><?php
+            echo $_SESSION["uname"];
+
+        
+            ?>!</h1>
                         <table>
                             <dl>
                                 <dt>Full name</dt>
-                                <dd>userABC123!</dd>
+                                <dd><?php
+            echo $_SESSION["uname"];
+
+        
+            ?>!</dd>
                                 <dt>Date of birth</dt>
                                 <dd>March 27, 2001</dd>
                                 <dt>Degree</dt>
                                 <dd>Computer Science</dd>
                                 <dt>Email</dt>
-                                <dd>userABC123@gmail.com</dd>
+                                <dd><?php
+            echo $_SESSION["uname"];
+
+        
+            ?>@gmail.com</dd>
                             </dl>
                         </table>
 

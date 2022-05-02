@@ -18,7 +18,11 @@
         <header>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Submissions</h2>
-            <h2>Hello <span id='user'>userABC123</span>!</h2>
+            <h2>Hello <span id='user'><?php
+            echo $_SESSION["uname"];
+
+        
+            ?></span>!</h2>
         </header>
         <main class="cards">
             <div class="prof-card">
@@ -27,7 +31,11 @@
                 </div>
                 <div class="NameArea">
                     <a href="profilePage_temp.php">
-                        <h3>userABC123</h3>
+                        <h3><?php
+            echo $_SESSION["uname"];
+
+        
+            ?></h3>
                     </a>
                 </div>
                 <div class="assigmentArea">
