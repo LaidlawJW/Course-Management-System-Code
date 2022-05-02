@@ -15,16 +15,27 @@ console_log('bet');
 if(isset($_POST["submit"])){
     echo "good good";
 
+    $SQLPasswordQuery = "SELECT pwd FROM main WHERE UserID = $name;";
+    $SQLPassword = mysqli_query($conn,$SQLPasswordQuery, MYSQLI_USE_RESULT);
 
-    // $name = $_POST["uname"];
-    // $psw = $_POST["pws"];
+    $SQLUserID =  "SELECT UserID FROM main WHERE password = $pass;";
 
-    $sql ="SELECT * FROM 'main' WHERE 'name' = $name";
+    
 
-    mysqli_query($conn, $sql);
+    echo $SQLPassword;
+    // echo $SQLUserID;
+    // echo $name;
+    // echo $pass;
+    
+
+    if($name = $SQLUserID && $pass = $SQLPassword){
+        header("location: ../pages/Dashboard_temp.php");
 
 
-    header("location: ../pages/Dashboard_temp.php");
+    }
+    //mysqli_query($conn, $sql);
+
+
 }
 else{
     echo" oh no your web dev is bad";

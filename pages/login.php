@@ -146,7 +146,7 @@ session_start();
     <div id="loginMenu" class="infoBox">
 
     
-    <form action ="../pages/Dashboard_temp.php" method = "POST">
+    <form action ="../includes/login.inc.php" method = "POST">
 
         <div class="xBtn">
             <span onclick="document.getElementById('loginMenu').style.display='none'" class="close" title="Close infoBox">&times;</span>
