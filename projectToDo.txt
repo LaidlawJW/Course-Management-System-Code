@@ -1,14 +1,8 @@
 To be done:
 
-Link pages together and expand side menu
-
-Add background photos and more color variety to front-end
-
 Restrict some pages based on user role (student, instructor, etc.)
 
-Integrate backend database and retrieval/saving
----
-Finish pages:
+Integrate backend database and retrieval/saving for grades/assignments
 
 Instructor can view their courses and select from a list of users to invite.
 
