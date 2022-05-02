@@ -1,15 +1,5 @@
-<?php
-session_start();
-
-?>
-
 <!DOCTYPE html>
-
-
 <html lang="en">
-
-
-
 
 <head>
     <meta charset="UTF-8">
@@ -22,19 +12,13 @@ session_start();
 </head>
 
 <body>
-    <?php include_once('navigation.php'); ?>
+<?php include_once('navigation.php'); ?>
+
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Dashboard</h2>
-            <h2>Hello <span id='user'>
-                
-            <?php
-            echo $_SESSION["uname"];
-
-        
-            ?>
-        </span>!</h2>
+            <h2>Hello <span id='user'>userABC123</span>!</h2>
         </header>
         <main class="cards">
             <div class="card">
@@ -46,15 +30,15 @@ session_start();
                 </div>
 
                 <div class="course-info">
-                    <h5>Due Date </span>
-                    </h5>
-                    <a href="../pages/Do-ass.php">
-                        <h4>Assignment 03</h4>
+                    <h5>Due Date: 2022/2/22 : LATE</h5>
+                    <h6></h6>
+                    <a href="assiPage-rev.php">
+                        <h4>Assignment 02</h4>
                     </a>
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS">100</span></h3>
+                        <h3>PTS: <span id="PTS">NG/100</span></h3>
 
                     </div>
                 </div>
@@ -67,14 +51,14 @@ session_start();
                     </a>
                 </div>
                 <div class="course-info">
-                    <h5>Due Date</h5>
-                    <a href="../pages/Do-ass.php">
+                    <h5>Due Date : 2022/3/14 : ON TIME</h5>
+                    <a href="assiPage-rev.php">
                         <h4>Chapter 3 Quiz</h4>
                     </a>
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS">25</span></h3>
+                        <h3>PTS: <span id="PTS">22/25</span></h3>
 
                     </div>
                 </div>
@@ -87,23 +71,22 @@ session_start();
                     </a>
                 </div>
                 <div class="course-info">
-                    <h5>Due Date</h5>
-                    <a href="../pages/Do-ass.php">
+                    <h5>Due Date: 2022/1/2 : ON TIME</h5>
+                    <a href="assiPage-rev.php">
                         <h4>Class Survey</h4>
                     </a>
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS">5</span></h3>
+                        <h3>PTS: <span id="PTS-G">5/5</span></h3>
 
                     </div>
                 </div>
             </div>
-
         </main>
-        <footer></footer>
+        <footer>Footer</footer>
     </div>
-    <aside></aside>
+    <aside>Aside</aside>
 </body>
 
 <script>

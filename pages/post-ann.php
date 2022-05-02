@@ -1,10 +1,3 @@
-<?php
-include_once("../includes/dbh.php");
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,47 +13,29 @@ session_start();
 
 <body>
 <?php include_once('navigation.php'); ?>
+
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
-
-            <h2>Hello
-            <?php    
-            $sql = "SELECT * FROM main WHERE UserID = 1";
-
-            $name = query($conn, $sql);
-            //echo $name;
-            echo $_SESSION["uname"];
-            ?>
-            !
-            </h2>
-
-            
+            <h2>Dashboard</h2>
+            <h2>Hello <span id='user'>userABC123</span>!</h2>
         </header>
         <main>
             <div class="form-temp">
                 <form id="form-ass">
-                    <h1 class="class-head">Homework03</h1>
                     <div class="message-area">
-                        <h4>Assigment message</h4>
+                        <h4>Announcement Message</h4>
                         <label for="message"></label>
-                        <textarea readonly name="msg" id="" msg cols="30" rows="5" class="form-control"></textarea>
+                        <textarea name="msg" id="" msg cols="30" rows="5" class="form-control"></textarea>
                     </div>
 
                     <div class="upload-area">
-                        <p>View Uploaded files </p>
-                        <h4>
-                            <a href="../THIS IS THE HOMEWORK TURNED IN.docx" download>Download</a>
-                        </h4>
+                        <p>If you have a file to Upload </p>
+                        <h6>Upload here...</h6>
+                        <input type="file">
                     </div>
-
-                    <div class="point-area">
-                        <p> How many points out of 25</p>
-                        <input type='number' />
-                    </div>
-
                     <div class="post-area">
-                        <button type="button" id="post" class="btn">Post Grade</button>
+                        <button type="button" id="post" class="btn">Post </button>
                     </div>
                 </form>
             </div>

@@ -1,10 +1,3 @@
-<?php
-include_once("../includes/dbh.php");
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,22 +13,12 @@ session_start();
 
 <body>
 <?php include_once('navigation.php'); ?>
+
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
 
-            <h2>Hello
-            <?php    
-            $sql = "SELECT * FROM main WHERE UserID = 1";
-
-            $name = query($conn, $sql);
-            //echo $name;
-            echo $_SESSION["uname"];
-            ?>
-            !
-            </h2>
-
-            
+            <h2>Hello <span id='user'>userABC123</span>!</h2>
         </header>
         <main>
             <div class="form-temp">
@@ -44,7 +27,7 @@ session_start();
                     <div class="message-area">
                         <h4>Assigment message</h4>
                         <label for="message"></label>
-                        <textarea readonly name="msg" id="" msg cols="30" rows="5" class="form-control"></textarea>
+                        <textarea readonly name="msg" id="" msg cols="30" rows="5" class="form-control">THIS IS MY HOMEWORK COMMENT</textarea>
                     </div>
 
                     <div class="upload-area">
@@ -54,14 +37,6 @@ session_start();
                         </h4>
                     </div>
 
-                    <div class="point-area">
-                        <p> How many points out of 25</p>
-                        <input type='number' />
-                    </div>
-
-                    <div class="post-area">
-                        <button type="button" id="post" class="btn">Post Grade</button>
-                    </div>
                 </form>
             </div>
 

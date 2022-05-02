@@ -12,29 +12,8 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="nav_items">
-            <a href="#" class="nav_item">
-                Dashboard <i  class="fa-solid fa-bars"></i>
-            </a>
-            <a class="nav_item" href="#">
-                Classes <i class="fa-solid fa-book"></i>
-            </a>
-            <a class="nav_item" href="#">
-                Completed Work <i class="fa-solid fa-clipboard-check"></i>
-            </a>
-            <a class="nav_item" href="#">
-                Profile <i class="fa-solid fa-user"></i>
-            </a>
-            <a class="nav_item" href="#">
-                Settings <i class="fa-solid fa-gear"></i>
-            </a>
-            <a class="nav_logout" href="#">
-                Logout <i class="fa-solid fa-right-from-bracket"></i>
-            </a>
-        </div>
-        <div class="nav_overlay"></div>
-    </nav>
+<?php include_once('navigation.php'); ?>
+
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>

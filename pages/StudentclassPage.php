@@ -12,135 +12,8 @@
 </head>
 
 <body>
-    <aside></aside>
-    <nav class="nav">
-        <ul class="out">
-            <li class="nav_items">
-                <a href="Dashboard_temp.html">
-                    <i class="fa-solid fa-bars"></i>
-                    <span class="n-text">
-                        Dashboard
-                    </span>
-                </a>
+<?php include_once('navigation.php'); ?>
 
-            </li>
-
-            <li class="nav_items">
-                <a href="profilePage_temp.html">
-                    <i class="fa-solid fa-book"></i>
-                    <span class="n-text">
-                        Classes
-                    </span>
-                </a>
-
-            </li>
-
-            <li class="nav_items">
-                <a href="Submissions.html">
-                    <i class="fa-solid fa-clipboard-check"></i>
-                    <span class="n-text">
-                        Completed Work
-                    </span>
-                </a>
-
-            </li>
-            <li class="nav_items">
-                <a href="edit-prof.html">
-                    <i class="fa-solid fa-user"></i>
-                    <span class="n-text">
-                        Profile
-                    </span>
-                </a>
-
-            </li>
-            <!--
-            <li class="nav_items">
-                <a href="#">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="n-text">
-                        Settings
-                    </span>
-                </a>
-
-            </li>
-            -->
-        </ul>
-
-        <ul class="logout">
-            <li class="nav_items">
-                <a href="#">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="n-text">
-                        Logout
-                    </span>
-                </a>
-                <nav class="nav">
-                    <ul class="out">
-                        <li class="nav_items">
-                            <a href="Dashboard_temp.html">
-                                <i class="fa-solid fa-bars"></i>
-                                <span class="n-text">
-                        Dashboard
-                    </span>
-                            </a>
-
-                        </li>
-
-                        <li class="nav_items">
-                            <a href="profilePage_temp.html">
-                                <i class="fa-solid fa-book"></i>
-                                <span class="n-text">
-                        Classes
-                    </span>
-                            </a>
-
-                        </li>
-
-                        <li class="nav_items">
-                            <a href="Submissions.html">
-                                <i class="fa-solid fa-clipboard-check"></i>
-                                <span class="n-text">
-                        Completed Work
-                    </span>
-                            </a>
-
-                        </li>
-                        <li class="nav_items">
-                            <a href="edit-prof.html">
-                                <i class="fa-solid fa-user"></i>
-                                <span class="n-text">
-                        Profile
-                    </span>
-                            </a>
-
-                        </li>
-                        <!--
-            <li class="nav_items">
-                <a href="#">
-                    <i class="fa-solid fa-gear"></i>
-                    <span class="n-text">
-                        Settings
-                    </span>
-                </a>
-
-            </li>
-            -->
-                    </ul>
-
-                    <ul class="logout">
-                        <li class="nav_items">
-                            <a href="#">
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                                <span class="n-text">
-                        Logout
-                    </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </li>
-        </ul>
-    </nav>
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
@@ -151,10 +24,10 @@
         <main class="t-dash">
 
             <div class="t-nav">
-                <a class="t-nav_item" href="Submissions.html">
+                <a class="t-nav_item" href="Submissions.php">
                         Submissions 
                     </a>
-                <a class="t-nav_item" href="viewPpl.html">
+                <a class="t-nav_item" href="viewPpl.php">
                         View people 
                     </a>
             </div>
@@ -164,14 +37,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 01</h4>
                         </a>
                     </div>
@@ -186,14 +59,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 02</h4>
                         </a>
                     </div>
@@ -208,14 +81,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 03</h4>
                         </a>
                     </div>
@@ -230,14 +103,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 04</h4>
                         </a>
                     </div>
@@ -252,14 +125,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 05</h4>
                         </a>
                     </div>
@@ -274,14 +147,14 @@
                 <div class="card">
                     <div class="course-name-social">
                         <h5>Course</h5>
-                        <a href="StudentclassPage.html">
+                        <a href="StudentclassPage.php">
                             <h4>Ethical Reasoning</h4>
                         </a>
                     </div>
 
                     <div class="course-info">
                         <h5>Due Date</h5>
-                        <a href="Do-ass.html">
+                        <a href="Do-ass.php">
                             <h4>Assignment 06</h4>
                         </a>
                     </div>

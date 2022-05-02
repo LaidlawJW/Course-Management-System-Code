@@ -7,9 +7,14 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="https://kit.fontawesome.com/787fe15a79.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/Main.css">
 </head>
 
 <body>
+<?php include_once('navigation.php'); ?>
+
 
     <div class="container">
 
