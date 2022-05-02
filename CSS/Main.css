@@ -307,7 +307,7 @@
     }
 
     .nav .nav_items:hover > a {
-        color: limegreen;
+        color: orange;
     }
 
     .nav_overlay {
