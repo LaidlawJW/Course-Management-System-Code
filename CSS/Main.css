@@ -415,8 +415,8 @@
 
     .card-avatar-img {
         vertical-align: middle;
-        width: 100%;
-        height: 100%;
+        width: 30%;
+        height: 30%;
         border-radius: 50%;
         border: #292727 2px solid;
     }
@@ -528,7 +528,7 @@
     }
 
     .t-nav_item:hover {
-        color: #7289da;
+        color: deepskyblue;
     }
 
     .t-cards {
@@ -577,7 +577,8 @@
         margin: 10px;
         padding: 20px;
         border-radius: 10px;
-        background-color: #7289da;
+        background-color: deepskyblue;
+        width: 50vw;
     }
 
     .point-area {
@@ -588,7 +589,7 @@
         border-radius: 10px;
         width: 50vw;
         padding: 20px;
-        background-color: #7289da;
+        background-color: deepskyblue;
     }
 
     input[type=text],
