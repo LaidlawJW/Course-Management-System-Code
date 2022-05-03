@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-
 <?php
 session_start();
-
 ?>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -15,10 +12,8 @@ session_start();
     <link rel="stylesheet" href="../CSS/Main.css">
     <title>Document</title>
 </head>
-
 <body>
 <?php include_once('navigation.php'); ?>
-
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
@@ -26,8 +21,6 @@ session_start();
             <h2>Hello <span id='user'>
             <?php
             echo $_SESSION["uname"];
-
-        
             ?></span>!</h2>
         </header>
         <main class='main-prof'>
@@ -43,16 +36,12 @@ session_start();
                         </figure>
                         <h1><?php
             echo $_SESSION["uname"];
-
-        
             ?></h1>
                         <table>
                             <dl>
                                 <dt>Full name</dt>
                                 <dd><?php
-            echo $_SESSION["uname"];
-
-        
+            echo $_SESSION["uname"];        
             ?></dd>
                                 <dt>Date of birth</dt>
                                 <dd>March 27, 2001</dd>
@@ -61,18 +50,11 @@ session_start();
                                 <dt>Email</dt>
                                 <dd><?php
             echo $_SESSION["uname"];
-
-        
             ?>@gmail.com</dd>
                             </dl>
                         </table>
-
                     </div>
                 </div>
-
-
-
-
                 <div class="prof-classes">
                     <table>
                         <tr>
@@ -107,13 +89,9 @@ session_start();
     </div>
     <aside></aside>
 </body>
-
 <script>
     var dt = new Date();
     var NoTimeDate = dt.getFullYear() + '/' + (dt.getMonth() + 1) + '/' + dt.getDate();
     document.getElementById('date').innerHTML = NoTimeDate;
 </script>
-
-
-
 </html>
