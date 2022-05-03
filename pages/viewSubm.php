@@ -27,7 +27,7 @@
         <main class="cards">
             <div class="prof-card">
                 <div class="prof-card-pic">
-                    <img src="../IMG/photo-man.jpg" class="card-avatar-img" alt="avatar">
+                    <<img src="<?php echo $_SESSION['pfp'];?>" />="../IMG/photo-man.jpg" class="card-avatar-img" alt="avatar">
                 </div>
                 <div class="NameArea">
                     <a href="profilePage_temp.php">

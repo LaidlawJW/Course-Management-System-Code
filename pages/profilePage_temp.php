@@ -39,7 +39,7 @@ session_start();
                 <div class="row">
                     <div class="profile">
                         <figure>
-                            <img src="../img/photo-man.jpg" />
+                            <img src="<?php echo $_SESSION['pfp'];?>" />
                         </figure>
                         <h1><?php
             echo $_SESSION["uname"];

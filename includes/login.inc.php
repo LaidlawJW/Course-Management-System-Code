@@ -23,7 +23,8 @@ if(isset($_POST["submit"])){
         session_start();
         $_SESSION["UserID"] = "$UserID";
         $_SESSION["uname"] = "$name";
-    
+        $_SESSION['pfp'] = $rows['linkToPfp'];
+
         header("location: ../pages/Dashboard_temp.php");
         exit();
     }
