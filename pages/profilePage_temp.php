@@ -45,7 +45,7 @@ session_start();
             echo $_SESSION["uname"];
 
         
-            ?>!</h1>
+            ?></h1>
                         <table>
                             <dl>
                                 <dt>Full name</dt>
@@ -53,7 +53,7 @@ session_start();
             echo $_SESSION["uname"];
 
         
-            ?>!</dd>
+            ?></dd>
                                 <dt>Date of birth</dt>
                                 <dd>March 27, 2001</dd>
                                 <dt>Degree</dt>
