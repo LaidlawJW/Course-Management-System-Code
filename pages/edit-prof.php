@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/787fe15a79.js" crossorigin="anonymous"></script>
     <script src="../JS/main.js"></script>
@@ -32,17 +31,22 @@
                         <p>Upload profile picture</p>
                         <h6>Upload here...</h6>
                         <input type="file">
+                        <img class="card-avatar-img" src="../img/photo-man.jpg">
                     </div>
-
+                    
+<!--
                     <div class="point-area">
                         <p> First Name</p>
                         <input type='text' />
                     </div>
+-->
 
+<!--
                     <div class="point-area">
                         <p> Last Name</p>
                         <input type='text' />
                     </div>
+-->
 
                     <div class="point-area">
                         <p>Change Email</p>
