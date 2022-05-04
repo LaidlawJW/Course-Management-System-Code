@@ -16,7 +16,7 @@ session_start();
             </li>
 
             <li class="nav_items">
-                <a href="profilePage_temp.php">
+                <a href="StudentclassPage.php">
                     <i class="fa-solid fa-book"></i>
                     <span class="n-text">
                         Classes
@@ -35,7 +35,7 @@ session_start();
 
             </li>
             <li class="nav_items">
-                <a href="edit-prof.php">
+                <a href="profilePage_temp.php">
                     <i class="fa-solid fa-user"></i>
                     <span class="n-text">
                         Profile

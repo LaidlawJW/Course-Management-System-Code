@@ -31,8 +31,8 @@
                         <p>Upload profile picture</p>
                         <h6>Upload here...</h6>
                         <input type="file">
-                        <img class="card-avatar-img" src="../img/photo-man.jpg">
-                    </div>
+                        <img class="card-avatar-img" 
+                        src="<?php echo $_SESSION['pfp'];?>" />                    </div>
                     
 <!--
                     <div class="point-area">
