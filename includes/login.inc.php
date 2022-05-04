@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
     } catch(Exception $e) {
         die($e->getMessage());
     }
-
+    
     $password = $rows['password'];
 
     if($pass == $password){
@@ -24,6 +24,8 @@ if(isset($_POST["submit"])){
         $_SESSION["UserID"] = "$UserID";
         $_SESSION["uname"] = "$name";
         $_SESSION['pfp'] = $rows['linkToPfp'];
+        $_SESSION['email'] = $rows['email'];
+        $_SESSION['major'] = $rows['major'];
 
         header("location: ../pages/Dashboard_temp.php");
         exit();

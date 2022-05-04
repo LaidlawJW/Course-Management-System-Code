@@ -40,17 +40,13 @@ session_start();
                         <table>
                             <dl>
                                 <dt>Full name</dt>
-                                <dd><?php
-            echo $_SESSION["uname"];        
-            ?></dd>
+                                <dd><?php echo $_SESSION["uname"];?></dd>
                                 <dt>Date of birth</dt>
                                 <dd>March 27, 2001</dd>
                                 <dt>Degree</dt>
-                                <dd>Computer Science</dd>
+                                <dd><?php echo $_SESSION["major"];?></dd>
                                 <dt>Email</dt>
-                                <dd><?php
-            echo $_SESSION["uname"];
-            ?>@gmail.com</dd>
+                                <dd><?php echo $_SESSION["email"];?></dd>
                             </dl>
                         </table>
                     </div>
@@ -62,7 +58,7 @@ session_start();
                             <th>Role</th>
                         </tr>
                         <tr>
-                            <td><a href="StudentclassPage.php">Ethics</a></td>
+                            <td><a href="StudentclassPage.php">Ethical Reasoning</a></td>
                             <td>Student</td>
                         </tr>
                         <tr>

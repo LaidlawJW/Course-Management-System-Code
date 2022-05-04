@@ -32,7 +32,8 @@
                         <h6>Upload here...</h6>
                         <input type="file">
                         <img class="card-avatar-img" 
-                        src="<?php echo $_SESSION['pfp'];?>" />                    </div>
+                        src="<?php echo $_SESSION['pfp'];?>" />
+                    </div>
                     
 <!--
                     <div class="point-area">
