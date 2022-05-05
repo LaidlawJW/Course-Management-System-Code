@@ -27,7 +27,17 @@
     }
 
     .btn-edit {
-        background-color: none;
+        background-color: limegreen;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .btn-edit:hover {
+        background-color: lightgreen;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -567,7 +577,7 @@
         padding: 20px;
         width: 50vw;
         border-radius: 10px;
-        background-color: teal;
+        background-color: deepskyblue;
     }
 
     .upload-area {
