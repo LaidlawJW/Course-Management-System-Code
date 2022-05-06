@@ -16,7 +16,7 @@ session_start();
             </li>
 
             <li class="nav_items">
-                <a href="StudentclassPage.php">
+                <a href="classes_page.php">
                     <i class="fa-solid fa-book"></i>
                     <span class="n-text">
                         Classes

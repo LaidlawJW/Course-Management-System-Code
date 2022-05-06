@@ -27,6 +27,19 @@ if(isset($_POST["submit"])){
         $_SESSION['email'] = $rows['email'];
         $_SESSION['major'] = $rows['major'];
 
+
+        $SQLClass = "SELECT classes.ClassName
+        FROM main
+        LEFT JOIN Classes
+        on main.UserID = Classes.UserID
+        WHERE username = 'Colten Cisler';";
+
+        $result2 = mysqli_query($conn, $SQLClass);
+        $rows2 = mysqli_fetch_assoc($result2);
+        $_SESSION["class"] = $rows2['ClassName'];
+
+
+
         header("location: ../pages/Dashboard_temp.php");
         exit();
     }

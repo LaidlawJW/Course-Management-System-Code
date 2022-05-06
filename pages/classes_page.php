@@ -26,7 +26,7 @@ session_start();
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
-            <h2>Dashboard</h2>
+            <h2>Classes</h2>
             <h2>Hello <span id='user'>
             <?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
@@ -35,7 +35,9 @@ session_start();
                 <div class="course-name-social">
                     <h5>Course</h5>
                     <a href="StudentclassPage.php">
-                        <h4>Ethical Reasoning</h4>
+                        <h4>
+                        <?php echo $_SESSION["class"];?>
+                        </h4>
                     </a>
                 </div>
             </div>
