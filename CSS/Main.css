@@ -8,7 +8,7 @@
         margin: 0;
         justify-content: center;
         text-decoration: none;
-        text-decoration-color: teal;
+        text-decoration-color: deepskyblue;
     }
 
     html {
@@ -27,17 +27,7 @@
     }
 
     .btn-edit {
-        background-color: limegreen;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-    .btn-edit:hover {
-        background-color: lightgreen;
+        background-color: red;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -64,7 +54,7 @@
     }
 
     .right_bar {
-        background-color: teal;
+        background-color: deepskyblue;
         float: right;
         height: 80vh;
     }
@@ -190,7 +180,7 @@
 
     .course-info h4 {
         text-decoration: underline;
-        text-decoration-color: teal;
+        text-decoration-color: deepskyblue;
     }
 
     .card:hover {
@@ -297,7 +287,7 @@
     }
 
     .nav_items:hover {
-        color: limegreen;
+        color: red;
     }
 
     .no-touch .scrollable.hover {
@@ -317,7 +307,7 @@
     }
 
     .nav .nav_items:hover > a {
-        color: orange;
+        color: red;
     }
 
     .nav_overlay {
@@ -432,7 +422,7 @@
     }
 
     .prof-card-pic {
-        background-color: teal;
+        background-color: deepskyblue;
         color: #fff;
         padding: 10px;
         max-width: 150px;
@@ -447,7 +437,7 @@
         align-items: center;
         padding-left: 20px;
         text-decoration: underline;
-        text-decoration-color: teal;
+        text-decoration-color: deepskyblue;
         padding-right: 10px;
         color: #cfc6c6;
     }
@@ -466,7 +456,7 @@
     }
 
     .prof-role {
-        border-left: teal solid 1px;
+        border-left: deepskyblue solid 1px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -488,7 +478,7 @@
         padding-left: 10px;
         padding-right: 10px;
         text-decoration: underline;
-        text-decoration-color: teal;
+        text-decoration-color: deepskyblue;
         color: #cfc6c6;
     }
 
@@ -636,7 +626,7 @@
         background-color: #292727;
         color: #ccc;
         padding: 12px 20px;
-        border: teal 2px solid;
+        border: deepskyblue 2px solid;
         font-size: large;
         border-radius: 4px;
         cursor: pointer;
@@ -644,7 +634,7 @@
     }
 
     .btn:hover {
-        background-color: #7289da;
+        background-color: red;
         color: #292727;
     }
 
@@ -672,19 +662,19 @@
     .prof-classes tr {
         padding: 10px;
         margin: 10px;
-        color: teal;
+        color: deepskyblue;
     }
 
     /* unvisited link */
     a:link {
-        color: deepskyblue;
+        color: white;
         cursor: pointer;
         text-decoration: underline;
     }
 
     /* visited link */
     a:visited {
-        color: deepskyblue;
+        color: white;
     }
 
     /* mouse over link */
