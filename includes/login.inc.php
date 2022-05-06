@@ -10,7 +10,7 @@ if(isset($_POST["submit"])){
     echo $echo;
 
     try {
-        $SQLUser =  "SELECT * FROM main WHERE username = '$name';";
+        $SQLUser =  "SELECT * FROM users WHERE username = '$name';";
         $result = mysqli_query($conn, $SQLUser);
         $rows = mysqli_fetch_assoc($result);
     } catch(Exception $e) {
@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
 
 
         $SQLClass = "SELECT classes.ClassName
-        FROM main
+        FROM users
         LEFT JOIN Classes
         on main.UserID = Classes.UserID
         WHERE username = 'Colten Cisler';";
