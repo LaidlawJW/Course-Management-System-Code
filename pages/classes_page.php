@@ -1,6 +1,9 @@
 <?php
-session_start();
+require_once("../includes/getclasses.inc.php");
 
+$dbCalls = new DatabaseCalls;
+
+$classes = $dbCalls->getClasses();
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +32,31 @@ session_start();
             <h2>Classes</h2>
             <h2>Hello <span id='user'>
             <?php echo $_SESSION["uname"];?></span>!</h2>
+
         </header>
         <main class="cards">
+        <?php
+        foreach($classes as $class) {
+        ?>
             <div class="card">
+            <div class="course-name-social">
+                <h5>Course</h5>
+                <a href="StudentclassPage.php">
+                    <h4>
+                    <?php echo $class['ClassName'];?>
+                    </h4>
+                </a>
+            </div>
+        </div> 
+        <?php
+        }
+        ?> 
+            <!--<div class="card">
                 <div class="course-name-social">
                     <h5>Course</h5>
                     <a href="StudentclassPage.php">
                         <h4>
-                        <?php echo $_SESSION["class"];?>
+                        
                         </h4>
                     </a>
                 </div>
@@ -56,7 +76,7 @@ session_start();
                         <h4>Animation Programming</h4>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
         </main>
         <footer></footer>

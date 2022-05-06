@@ -2,13 +2,18 @@
 
 include_once('helper.php');
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "CMS";
+class DBH {
+    private $dbServername = "localhost";
+    private $dbUsername = "root";
+    private $dbPassword = "";
+    private $dbName = "CMS";
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+    public function connect() {
+        $conn = mysqli_connect($this->dbServername, $this->dbUsername, $this->dbPassword, $this->dbName);
 
-if(!$conn){
-    die("connection failed" .mysqli_connect_error());
+        if(!$conn){
+        die("connection failed" .mysqli_connect_error());
+        }
+        return $conn;
+    }
 }

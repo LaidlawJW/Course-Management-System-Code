@@ -6,8 +6,8 @@ $name = $_POST['uname'];
 $pass = $_POST['psw'];
 
 if(isset($_POST["submit"])){
-    echo "good good";
-    echo $echo;
+    $DBH = new DBH;
+    $conn = $DBH->connect();
 
     try {
         $SQLUser =  "SELECT * FROM users WHERE username = '$name';";
@@ -28,15 +28,7 @@ if(isset($_POST["submit"])){
         $_SESSION['major'] = $rows['major'];
 
 
-        $SQLClass = "SELECT classes.ClassName
-        FROM users
-        LEFT JOIN Classes
-        on main.UserID = Classes.UserID
-        WHERE username = 'Colten Cisler';";
 
-        $result2 = mysqli_query($conn, $SQLClass);
-        $rows2 = mysqli_fetch_assoc($result2);
-        $_SESSION["class"] = $rows2['ClassName'];
 
 
 
