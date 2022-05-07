@@ -1,19 +1,11 @@
+<!DOCTYPE html>
 <?php
-require_once("../includes/getclasses.inc.php");
-
+require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
-
 $classes = $dbCalls->getClasses();
 ?>
 
-<!DOCTYPE html>
-
-
 <html lang="en">
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
