@@ -7,3 +7,15 @@ Integrate backend database and retrieval/saving for grades/assignments
 Instructor can view their courses and select from a list of users to invite.
 
 Invite and remove students from courses
+
+teacher stuff:
+teachersPage
+post-ann
+post-ass
+all the assiPage
+submissions
+
+admin stuff:
+ex-mang-main
+nav bar if statement
+
