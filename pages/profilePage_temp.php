@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
-session_start();
-?>
+require_once("../includes/databaseCalls.php");
+$dbCalls = new DatabaseCalls;
+$classes = $dbCalls->getClasses();
+ ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,10 +43,8 @@ session_start();
                             <dl>
                                 <dt>Full name</dt>
                                 <dd><?php echo $_SESSION["uname"];?></dd>
-                                <dt>Date of birth</dt>
-                                <dd>March 27, 2001</dd>
-                                <dt>Degree</dt>
-                                <dd><?php echo $_SESSION["major"];?></dd>
+                                <!-- <dt>Degree</dt>
+                                <dd><?php echo $_SESSION["major"];?></dd> -->
                                 <dt>Email</dt>
                                 <dd><?php echo $_SESSION["email"];?></dd>
                             </dl>
@@ -53,7 +53,29 @@ session_start();
                 </div>
                 <div class="prof-classes">
                     <table>
-                        <tr>
+
+
+            <tr>
+                <th>Current Classes</th>
+                <th>Role</th>
+            </tr>
+            <?php
+            foreach($classes as $class) {
+            ?>
+                <tr>
+                    <td><a href="StudentclassPage.php"><?php echo $class['ClassName'];?></a></td>
+                    <td>Student</td>
+                </tr>
+
+                        
+                     </h4>
+                 </a>
+              </div>
+            </div> 
+            <?php
+            }
+         ?> 
+                        <!-- <tr>
                             <th>Current Classes</th>
                             <th>Role</th>
                         </tr>
@@ -76,7 +98,7 @@ session_start();
                         <tr>
                             <td><a href="StudentclassPage.php">Art History</a></td>
                             <td>Student</td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>

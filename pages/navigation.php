@@ -43,6 +43,15 @@ session_start();
                 </a>
 
             </li>
+            <li class="nav_items">
+                <a href="ex-mang-main.php">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span class="n-text">
+                        Admin Page
+                    </span>
+                </a>
+
+            </li>
             <!--
             <li class="nav_items">
                 <a href="#">

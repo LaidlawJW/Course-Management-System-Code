@@ -27,7 +27,7 @@ $classes = $dbCalls->getClasses();
 
         </header>
         <main class="cards">
-        <?php
+        <!-- <?php
         foreach($classes as $class) {
         ?>
             <div class="card">
@@ -39,6 +39,21 @@ $classes = $dbCalls->getClasses();
                     </h4>
                 </a>
             </div>
+        </div> 
+        <?php
+        }
+        ?>  -->
+
+<?php
+        foreach($classes as $class) {
+        ?>
+            <div class="cardclasses">
+                <h5>Course</h5>
+                <a href="StudentclassPage.php">
+                    <h4>
+                    <?php echo $class['ClassName'];?>
+                    </h4>
+                </a>
         </div> 
         <?php
         }
