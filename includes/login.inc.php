@@ -26,6 +26,7 @@ if(isset($_POST["submit"])){
         $_SESSION['pfp'] = $rows['linkToPfp'];
         $_SESSION['email'] = $rows['email'];
         $_SESSION['major'] = $rows['major'];
+        $_SESSION['type'] = $rows['type'];
 
 
 
@@ -38,7 +39,7 @@ if(isset($_POST["submit"])){
     else{
         console_log('ahhhhh');
 
-        echo" oh no your web dev is bad";
+        echo" oh no your userid or password is bad";
         //header("location: /signout.inc.php");
     }
 }

@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("../includes/databaseCalls.php");
 ?>
 
 <aside></aside>
@@ -43,6 +43,9 @@ session_start();
                 </a>
 
             </li>
+            
+           
+        
             <li class="nav_items">
                 <a href="ex-mang-main.php">
                 <i class="fa-solid fa-screwdriver-wrench"></i>

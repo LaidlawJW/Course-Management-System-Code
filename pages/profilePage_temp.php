@@ -2,6 +2,7 @@
 <?php
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
+
 $classes = $dbCalls->getClasses();
  ?>
 <html lang="en">

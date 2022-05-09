@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+require_once("../includes/databaseCalls.php");
+$dbCalls = new DatabaseCalls;
+$classes = $dbCalls->getAssignmentsByUserID();
+?>
 <html lang="en">
 
 <head>
@@ -37,6 +42,7 @@
             </div>
 
             <div class="t-cards">
+ 
 
                 <div class="card">
                     <div class="course-name-social">

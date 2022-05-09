@@ -13,14 +13,24 @@ public function getClasses() {
     on users.UserID = Classes.UserID
     WHERE username = 'Colten Cisler'";
 
+
     $result2 = mysqli_query($conn, $SQLClass);
     return mysqli_fetch_all($result2, MYSQLI_ASSOC);
 }
 
-public function getAssignmentsByUserID($userID) {
+public function getAssignmentsByUserID() {
     $conn = $this->connect();
+    
 
-    $sql = "SELECT * FROM assigns WHERE user_id = $userID";
+    $sql = 
+    "SELECT *
+    FROM assignments
+    LEFT JOIN assigns
+    on assignments.AssignmentID = assigns.AssgnmentID
+    LEFT JOIN users
+    ON users.UserID = assigns.UserID
+    WHERE username = 'Colten Cisler';";
+
     $result2 = mysqli_query($conn, $sql);
     return mysqli_fetch_all($result2, MYSQLI_ASSOC);
 }
