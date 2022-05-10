@@ -2,7 +2,8 @@
 <?php
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
-$classes = $dbCalls->getAssignmentsByUserID();
+$classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
+$assignments = $dbCalls->getAssignmentsByClassID($_GET['classID']);
 ?>
 <html lang="en">
 
@@ -43,141 +44,30 @@ $classes = $dbCalls->getAssignmentsByUserID();
 
             <div class="t-cards">
  
-
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
-
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 01</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
-                    </div>
+                <?php foreach($assignments as $assignment) { ?>
+                    <div class="card">
+                <div class="course-name-social">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php?classID=<?php echo $assignment['ClassID']?>">
+                        <h4><?php echo $assignment['ClassName'];?></h4>
+                    </a>
                 </div>
 
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
+                <div class="course-info">
+                    <h5>Due Date </span>
+                    </h5>
+                    <a href="../pages/Do-ass.php?assignmentID=<?php echo $assignment['AssignmentID']?>">
+                        <h4><?php echo $assignment['AssignmentName'];?></h4>
+                    </a>
+                </div>
+                <div class="points">
+                    <div class="frame">
+                        <h3>PTS: <span id="PTS"><?php echo $assignment['Points'];?></span></h3>
 
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 02</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
-
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 03</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
-
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 04</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
-
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 05</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="course-name-social">
-                        <h5>Course</h5>
-                        <a href="StudentclassPage.php">
-                            <h4>Ethical Reasoning</h4>
-                        </a>
-                    </div>
-
-                    <div class="course-info">
-                        <h5>Due Date</h5>
-                        <a href="Do-ass.php">
-                            <h4>Assignment 06</h4>
-                        </a>
-                    </div>
-                    <div class="points">
-                        <div class="frame">
-                            <h3>PTS: <span id="PTS">100</span></h3>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
+            </div>
+                <?php } ?>
             </div>
 
 

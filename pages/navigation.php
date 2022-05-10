@@ -1,5 +1,6 @@
 <?php
 require_once("../includes/databaseCalls.php");
+session_start();
 ?>
 
 <aside></aside>
@@ -44,8 +45,9 @@ require_once("../includes/databaseCalls.php");
 
             </li>
             
-           
-        
+           <?php
+           if ($_SESSION['type'] == 'admin') {
+            ?>
             <li class="nav_items">
                 <a href="ex-mang-main.php">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -55,6 +57,7 @@ require_once("../includes/databaseCalls.php");
                 </a>
 
             </li>
+            <?php } ?>
             <!--
             <li class="nav_items">
                 <a href="#">

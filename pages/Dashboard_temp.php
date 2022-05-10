@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+require_once('../includes/databaseCalls.php');
+$dbCalls = new DatabaseCalls;
+$assignments = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
 ?>
 
 <!DOCTYPE html>
@@ -25,75 +27,37 @@ session_start();
     <?php include_once('navigation.php'); ?>
     <div class="col-2">
         <header>
+            <?php echo $assignments[0];?>
             <h2>Current Date: <span id='date'></span></h2>
             <h2>Dashboard</h2>
             <h2>Hello <span id='user'>
             <?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
         <main class="cards">
+            <?php foreach($assignments as $assignment) { ?>
             <div class="card">
                 <div class="course-name-social">
                     <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Ethical Reasoning</h4>
+                    <a href="StudentclassPage.php?ClassID=<?php echo $assignment['ClassID']?>">
+                        <h4><?php echo $assignment['ClassName'];?></h4>
                     </a>
                 </div>
 
                 <div class="course-info">
                     <h5>Due Date </span>
                     </h5>
-                    <a href="../pages/Do-ass.php">
-                        <h4>Assignment 03</h4>
+                    <a href="../pages/Do-ass.php?AssignmentID=<?php echo $assignment['AssignmentID']?>">
+                        <h4><?php echo $assignment['AssignmentName'];?></h4>
                     </a>
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS">100</span></h3>
+                        <h3>PTS: <span id="PTS"><?php echo $assignment['Points'];?></span></h3>
 
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="course-name-science">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Plants and Society</h4>
-                    </a>
-                </div>
-                <div class="course-info">
-                    <h5>Due Date</h5>
-                    <a href="../pages/Do-ass.php">
-                        <h4>Chapter 3 Quiz</h4>
-                    </a>
-                </div>
-                <div class="points">
-                    <div class="frame">
-                        <h3>PTS: <span id="PTS">25</span></h3>
-
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="course-name-eng">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Animation Programming</h4>
-                    </a>
-                </div>
-                <div class="course-info">
-                    <h5>Due Date</h5>
-                    <a href="../pages/Do-ass.php">
-                        <h4>Class Survey</h4>
-                    </a>
-                </div>
-                <div class="points">
-                    <div class="frame">
-                        <h3>PTS: <span id="PTS">5</span></h3>
-
-                    </div>
-                </div>
-            </div>
-
+            <?php } ?>
         </main>
         <footer></footer>
     </div>

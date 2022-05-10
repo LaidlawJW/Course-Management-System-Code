@@ -4,35 +4,50 @@ require_once("dbh.php");
 
 class DatabaseCalls extends DBH {
 
-public function getClasses() {
-    $conn = $this->connect();
+public function getClassesByUserID($userID) {
+    try {
+        $conn = $this->connect();
 
-    $SQLClass = "SELECT classes.ClassName
-    FROM users
-    LEFT JOIN Classes
-    on users.UserID = Classes.UserID
-    WHERE username = 'Colten Cisler'";
+        $SQLClass = "SELECT classes.ClassName
+        FROM users
+        LEFT JOIN Classes
+        on users.UserID = Classes.UserID
+        WHERE username = '$userID'";
 
 
-    $result2 = mysqli_query($conn, $SQLClass);
-    return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+        $result2 = mysqli_query($conn, $SQLClass);
+        return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
 }
 
-public function getAssignmentsByUserID() {
+public function getAssignmentsByUserID($userID) {
     $conn = $this->connect();
     
+    try {
+        $sql = 
+        "SELECT * FROM assignments LEFT JOIN assigns on assignments.AssignmentID = assigns.AssgnmentID LEFT JOIN users ON users.UserID = assigns.UserID LEFT JOIN Classes ON Classes.ClassID = assignments.ClassID WHERE users.UserID = $userID;";
 
-    $sql = 
-    "SELECT *
-    FROM assignments
-    LEFT JOIN assigns
-    on assignments.AssignmentID = assigns.AssgnmentID
-    LEFT JOIN users
-    ON users.UserID = assigns.UserID
-    WHERE username = 'Colten Cisler';";
+        $result2 = mysqli_query($conn, $sql);
+        return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
 
-    $result2 = mysqli_query($conn, $sql);
-    return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+public function  getAssignmentsByClassId($classID) {
+    $conn = $this->connect();
+    
+    try {
+        $sql = 
+        "SELECT * FROM assignments LEFT JOIN assigns on assignments.AssignmentID = assigns.AssgnmentID LEFT JOIN users ON users.UserID = assigns.UserID LEFT JOIN Classes ON Classes.ClassID = assignments.ClassID WHERE Classes.ClassID = $classID;";
+
+        $result2 = mysqli_query($conn, $sql);
+        return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }  
 }
 
 public function uploadPfp($pfp,) {

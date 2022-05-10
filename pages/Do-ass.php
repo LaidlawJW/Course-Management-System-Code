@@ -20,6 +20,7 @@
             <h2>Homework</h2>
             <h2>Hello <span id='user'><?php
             echo $_SESSION["uname"];
+            echo $_GET['AssignmentID'];
 
         
             ?></span>!</h2>

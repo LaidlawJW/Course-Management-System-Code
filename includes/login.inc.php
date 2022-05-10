@@ -21,12 +21,13 @@ if(isset($_POST["submit"])){
 
     if($pass == $password){
         session_start();
-        $_SESSION["UserID"] = "$UserID";
+        $_SESSION["UserID"] = $rows['UserID'];
         $_SESSION["uname"] = "$name";
         $_SESSION['pfp'] = $rows['linkToPfp'];
         $_SESSION['email'] = $rows['email'];
         $_SESSION['major'] = $rows['major'];
         $_SESSION['type'] = $rows['type'];
+        
 
 
 
