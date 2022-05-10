@@ -2,7 +2,7 @@
 <?php
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
-$classes = $dbCalls->getClasses();
+$classes = $dbCalls->getClassesByUserID($_SESSION["UserID"]);
 ?>
 
 <html lang="en">
@@ -27,28 +27,12 @@ $classes = $dbCalls->getClasses();
 
         </header>
         <main class="cards">
-        <!-- <?php
-        foreach($classes as $class) {
-        ?>
-            <div class="card">
-            <div class="course-name-social">
-                <h5>Course</h5>
-                <a href="StudentclassPage.php">
-                    <h4>
-                    <?php echo $class['ClassName'];?>
-                    </h4>
-                </a>
-            </div>
-        </div> 
-        <?php
-        }
-        ?>  -->
 
 <?php
         foreach($classes as $class) {
         ?>
             <div class="cardclasses">
-                <h5>Course</h5>
+                <h5 style="padding: 0 10px; height: min-content;">Course</h5>
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $class['ClassName'];?>
@@ -58,32 +42,7 @@ $classes = $dbCalls->getClasses();
         <?php
         }
         ?> 
-            <!--<div class="card">
-                <div class="course-name-social">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>
-                        
-                        </h4>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="course-name-science">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Plants and Society</h4>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="course-name-eng">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Animation Programming</h4>
-                    </a>
-                </div>
-            </div> -->
+
 
         </main>
         <footer></footer>
