@@ -96,12 +96,12 @@ public function getAllUsers() {
     }
 }
 
-public function  getAssignmentsByClassId($classID) {
+public function  getAssignmentsByClassId() {
     $conn = $this->connect();
     
     try {
         $sql = 
-        "SELECT * FROM assignments LEFT JOIN assigns on assignments.AssignmentID = assigns.AssgnmentID LEFT JOIN users ON users.UserID = assigns.UserID LEFT JOIN Classes ON Classes.ClassID = assignments.ClassID WHERE Classes.ClassID = $classID;";
+        "SELECT * FROM assignments LEFT JOIN assigns on assignments.AssignmentID = assigns.AssgnmentID LEFT JOIN users ON users.UserID = assigns.UserID LEFT JOIN Classes ON Classes.ClassID = assignments.ClassID WHERE Classes.ClassID = 1";
 
         $result2 = mysqli_query($conn, $sql);
         return mysqli_fetch_all($result2, MYSQLI_ASSOC);
