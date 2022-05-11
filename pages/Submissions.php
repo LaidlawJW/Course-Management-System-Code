@@ -28,24 +28,31 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
         </header>
         <main class="cards">
         <?php
-        foreach($doneAss as $doneA) {
+        foreach($doneAss as $ass) {
         ?>
-            <div class="cardclasses">
-                <h5 style="padding: 0 10px; height: min-content;">Class</h5>
-                <a href="assiPage-rev.php">
-                    <h4>
-                    <?php echo $doneA['AssignmentName'];?>
-                    <?php echo $doneA['grade'];?>
-                    <?php echo $doneA['Points'];?>
-
-
-
-                    </h4>
-                </a>
-        </div> 
+       <div class="card">
+                <div class="course-name-science">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php">
+                        <h4><?php echo $ass['AssignmentName'];?></h4>
+                    </a>
+                </div>
+                <div class="course-info">
+                    <h5>Due Date: <?php echo $ass['grade'];?></h5>
+                    <a href="assiPage-rev.php">
+                        <h4> <?php echo $ass['AssignmentName'];?></h4>
+                    </a>
+                </div>
+                <div class="points">
+                    <div class="frame">
+                        <h3>PTS: <span id="PTS"><?php echo $ass['Points'];?> / <?php echo $ass['Points'];?></span></h3>
+ 
+                    </div>
+                </div>
+            </div>
         <?php
         }
-        ?> 
+        ?>
             <!-- <div class="card">
                 <div class="course-name-social">
                     <h5>Course</h5>
@@ -109,7 +116,7 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
                 </div>
             </div>
         </main>
-        <footer>Footer</footer>
+        <footer></footer>
     </div>
     <aside></aside>
 </body>
