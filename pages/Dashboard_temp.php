@@ -3,6 +3,8 @@ session_start();
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
 $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +54,19 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
         <?php
         }
         ?>
+        <div class="card">
+                <div class="course-name-science">
+                    <h5>Announcement</h5>
+                    <a href="StudentclassPage.php">
+                        <h4>Programming Languages</h4>
+                    </a>
+                </div>
+                <div class="course-info">
+                    <a href="annPage3.php">
+                        <h4>No class this week</h4>
+                    </a>
+                </div>
+            </div>
 
 
                 <!-- <div class="course-info">

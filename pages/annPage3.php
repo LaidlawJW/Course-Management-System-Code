@@ -27,7 +27,7 @@
         <main>
             <div class="form-temp">
                 <form id="form-ass">
-                    <h1 class="class-head">MIPS coding</h1>
+                    <h1 class="class-head">No class this week</h1>
                     <div class="message-area">
                         <h4>announcement message</h4>
                         <label for="message"></label>
