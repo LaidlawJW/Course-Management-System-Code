@@ -1,16 +1,11 @@
 <?php
 session_start();
-
+require_once("../includes/databaseCalls.php");
+$dbCalls = new DatabaseCalls;
+$assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
 ?>
-
 <!DOCTYPE html>
-
-
 <html lang="en">
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -31,15 +26,22 @@ session_start();
             <?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
         <main class="cards">
-            <div class="card">
-                <div class="course-name-social">
-                    <h5>Course</h5>
-                    <a href="StudentclassPage.php">
-                        <h4>Ethical Reasoning</h4>
-                    </a>
-                </div>
+        <?php
+        foreach($assign as $ass) {
+        ?>
+            <div class="cardclasses">
+                <h5 style="padding: 0 10px; height: min-content;">Course</h5>
+                <a href="StudentclassPage.php">
+                    <h4>
+                    <?php echo $ass['AssignmentName'];?>
+                    </h4>
+                </a>
+        </div> 
+        <?php
+        }
+        ?> 
 
-                <div class="course-info">
+                <!-- <div class="course-info">
                     <h5>Due Date </span>
                     </h5>
                     <a href="../pages/Do-ass.php">
@@ -88,7 +90,7 @@ session_start();
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS">5</span></h3>
+                        <h3>PTS: <span id="PTS">5</span></h3> -->
 
                     </div>
                 </div>
