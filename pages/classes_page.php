@@ -27,22 +27,76 @@ $classes = $dbCalls->getClassesByUserID($_SESSION['UserID']);
 
         </header>
         <main class="cards">
-
-<?php
+        <!-- <?php
         foreach($classes as $class) {
         ?>
-            <div class="cardclasses">
-                <h5 style="padding: 0 10px; height: min-content;">Course</h5>
+            <div class="card">
+            <div class="course-name-social">
+                <h5>Course</h5>
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $class['ClassName'];?>
                     </h4>
+                </a>
+            </div>
+        </div> 
+        <?php
+        }
+        ?>  -->
+
+<?php
+        foreach($classes as $class) {
+        ?>
+             <div class="cardclasses">
+                <div class="course-name">
+                    <h2>Course</h2>
+                </div>
+                <a href="StudentclassPage.php">
+                    <h2>
+                    <?php echo $class['ClassName'];?>
+                    </h2>
                 </a>
         </div> 
         <?php
         }
         ?> 
 
+        <div class="cardclasses">
+                <div class="course-name">
+                    <h2>course </h2>
+                </div>
+                <a href="StudentclassPage.php">
+                    <h2>
+                     CLASS Name
+                    </h2>
+                </a>
+        </div> 
+            <!--<div class="card">
+                <div class="course-name-social">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php">
+                        <h4>
+                        
+                        </h4>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="course-name-science">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php">
+                        <h4>Plants and Society</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="course-name-eng">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php">
+                        <h4>Animation Programming</h4>
+                    </a>
+                </div>
+            </div> -->
 
         </main>
         <footer></footer>
