@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+require_once("../includes/databaseCalls.php");
+$dbCalls = new DatabaseCalls;
+$doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
+?>
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -21,15 +25,29 @@
             <h2>Hello <span id='user'><?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
         <main class="cards">
-            <div class="card">
+        <?php
+        foreach($doneAss as $doneA) {
+        ?>
+            <div class="cardclasses">
+                <h5 style="padding: 0 10px; height: min-content;">Class</h5>
+                <a href="StudentclassPage.php">
+                    <h4>
+                    <?php echo $doneA['AssignmentName'];?>
+                    </h4>
+                </a>
+        </div> 
+        <?php
+        }
+        ?> 
+            <!-- <div class="card">
                 <div class="course-name-social">
                     <h5>Course</h5>
                     <a href="StudentclassPage.php">
                         <h4>Ethical Reasoning</h4>
                     </a>
-                </div>
+                </div> -->
 
-                <div class="course-info">
+                <!-- <div class="course-info">
                     <h5>Due Date: 2022/2/22 : LATE</h5>
                     <h6></h6>
                     <a href="assiPage-rev.php">
@@ -78,7 +96,7 @@
                 </div>
                 <div class="points">
                     <div class="frame">
-                        <h3>PTS: <span id="PTS-G">5/5</span></h3>
+                        <h3>PTS: <span id="PTS-G">5/5</span></h3> -->
 
                     </div>
                 </div>

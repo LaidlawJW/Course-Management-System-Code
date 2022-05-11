@@ -32,7 +32,7 @@ $classes = $dbCalls->getClassesByUserID($_SESSION['UserID']);
         foreach($classes as $class) {
         ?>
             <div class="cardclasses">
-                <h5 style="padding: 0 10px; height: min-content;">Course</h5>
+                <h5 style="padding: 0 10px; height: min-content;">Class</h5>
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $class['ClassName'];?>

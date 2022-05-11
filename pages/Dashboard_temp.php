@@ -30,7 +30,7 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
         foreach($assign as $ass) {
         ?>
             <div class="cardclasses">
-                <h5 style="padding: 0 10px; height: min-content;">Course</h5>
+                <h5 style="padding: 0 10px; height: min-content;">Assignment</h5>
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $ass['AssignmentName'];?>
