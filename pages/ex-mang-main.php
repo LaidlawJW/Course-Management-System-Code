@@ -13,11 +13,17 @@
 </head>
 
 <body>
-<?php include_once('navigation.php'); ?>
+    <?php include_once('navigation.php'); ?>
 
 
     <div class="container">
 
+        <button id="export-btn" class="btn btn-primary">Search</button>
+        <button id="export-btn" class="btn btn-primary">Export Data CSV</button>
+        <button id="export-btn" class="btn btn-primary">Delete Account</button>
+        <button id="export-btn" class="btn btn-primary">Edit Account</button>
+        <button id="export-btn" class="btn btn-primary">Add Account</button>
+        <p id="export"></p>
 
         <div id="table" class="table-editable">
             <span class="table-add glyphicon glyphicon-plus"></span>
@@ -54,13 +60,6 @@
                 </tr>
             </table>
         </div>
-
-        <button id="export-btn" class="btn btn-primary">Search</button>
-        <button id="export-btn" class="btn btn-primary">Export Data CSV</button>
-        <button id="export-btn" class="btn btn-primary">Delete Account</button>
-        <button id="export-btn" class="btn btn-primary">Edit Account</button>
-        <button id="export-btn" class="btn btn-primary">Add Account</button>
-        <p id="export"></p>
     </div>
 </body>
 
@@ -121,6 +120,7 @@
         // Output the result
         $EXPORT.text(JSON.stringify(data));
     });
+
 </script>
 
 <style>
@@ -137,49 +137,45 @@
         text-decoration-color: #7289da;
         background-color: #313233;
     }
-    
+
     .table-editable {
         position: relative;
-        color: #cfc6c6;
+        color: black;
     }
-    
-    #table {
-        color: #cfc6c6;
+
+    .table th{
+        color: black;
     }
-    
-    div {
-        color: #cfc6c6;
-    }
-    
+
     .table-editable .glyphicon {
         font-size: 20px;
     }
-    
+
     .table-remove {
         color: #700;
         cursor: pointer;
     }
-    
-    .table-remove :hover {
+
+    .table-remove:hover {
         color: #f00;
     }
-    
+
     .table-up,
     .table-down {
         color: rgb(132, 132, 206);
         cursor: pointer;
     }
-    
+
     .table-up,
     .table-down :hover {
         color: #7289da;
     }
-    
+
     .container {
         background-color: #a5a5a5;
-        color: #cfc6c6;
+        color: black;
     }
-    
+
     .table-add {
         color: #070;
         cursor: pointer;
@@ -187,12 +183,13 @@
         top: 8px;
         right: 0;
     }
-    
+
     .table-add:hover {
         color: #0b0;
     }
-    
+
     .btn {
         background-color: #7289da;
     }
+
 </style>
