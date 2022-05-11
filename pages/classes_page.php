@@ -2,7 +2,7 @@
 <?php
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
-$classes = $dbCalls->getClassesByUserID($_SESSION["UserID"]);
+$classes = $dbCalls->getClassesByUserID($_SESSION['UserID']);
 ?>
 
 <html lang="en">

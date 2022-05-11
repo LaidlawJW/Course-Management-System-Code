@@ -8,11 +8,14 @@ public function getClassesByUserID($userID) {
     try {
         $conn = $this->connect();
 
-        $SQLClass = "SELECT classes.ClassName
-        FROM users
-        LEFT JOIN Classes
-        on users.UserID = Classes.UserID
-        WHERE username = '$userID'";
+        $SQLClass = 
+        "SELECT ClassName
+        FROM Classes        
+        JOIN take
+        on classes.UserID = take.UserID
+        JOIN users
+        ON take.UserID = users.UserID
+        WHERE users.UserID = $userID";
 
 
         $result2 = mysqli_query($conn, $SQLClass);

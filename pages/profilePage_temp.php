@@ -3,7 +3,7 @@
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
 
-$classes = $dbCalls->getClasses();
+$classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
  ?>
 <html lang="en">
 <head>
