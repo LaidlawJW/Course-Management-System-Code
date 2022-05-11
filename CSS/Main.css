@@ -121,6 +121,7 @@
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
         transition: all 0.2s;
         overflow: hidden;
+        text-indent: 50px;
         border: #7289da 1px solid;
         color: #cfc6c6;
     }
@@ -130,7 +131,7 @@
         color: #fff;
         padding: 10px;
         padding-top: 0;
-        max-width: 150px;
+        min-width: 150px;
     }
 
     .course-name-eng {
@@ -138,6 +139,7 @@
         color: #fff;
         padding: 10px;
         padding-top: 0;
+        min-width: 150px;
         max-width: 150px;
     }
 
@@ -146,7 +148,8 @@
         color: #fff;
         padding: 10px;
         padding-top: 0;
-        min-width:300px;
+        min-width:150px;
+        max-width: 150px;
     }
 
     .course-name-art {
@@ -154,6 +157,16 @@
         color: #fff;
         padding: 10px;
         padding-top: 0;
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .course-name {
+        background-color: #257092;
+        color: #fff;
+        padding: 10px;
+        padding-top: 0;
+        min-width: 150px;
         max-width: 150px;
     }
 
@@ -190,6 +203,14 @@
         padding: 0px;
         position: relative;
         width: 80%;
+        color: #cfc6c6;
+    }
+    .coursebox {
+        margin-left: 20px;
+        padding: 0px;
+        position: relative;
+        width: 30%;
+       
         color: #cfc6c6;
     }
 
