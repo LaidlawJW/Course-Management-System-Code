@@ -29,7 +29,7 @@
                 <form id="form-ass">
                     <h1 class="class-head">Python Factorial</h1>
                     <div class="message-area">
-                        <h4>Assigment message</h4>
+                        <h4>Make a factorial calc with Python</h4>
                         <label for="message"></label>
                         <textarea readonly name="msg" id="" msg cols="30" rows="5" class="form-control">THIS IS MY HOMEWORK COMMENT</textarea>
                     </div>

@@ -3,7 +3,7 @@
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
 
-$classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
+$classes = $dbCalls->getAssignmentsByClassID($_SESSION['UserID']);
 //$assignments = $dbCalls->getAssignmentsByClassID($_GET['classID']);
 ?>
 <html lang="en">
@@ -24,7 +24,7 @@ $classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
-            <h2>Class Page Name</h2>
+            <h2>Programming Languages</h2>
             <h2>Hello <span id='user'><?php
             echo $_SESSION["uname"];
 
@@ -45,7 +45,7 @@ $classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
 
             <div class="t-cards">
  
-                <?php foreach($assignments as $assignment) { ?>
+                <?php foreach($classes as $assignment) { ?>
                     <div class="card">
                 <div class="course-name-social">
                     <h5>Course</h5>
