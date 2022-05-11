@@ -27,9 +27,9 @@
         <main>
             <div class="form-temp">
                 <form id="form-ass">
-                    <h1 class="class-head">Homework03</h1>
+                    <h1 class="class-head">C++ pointers</h1>
                     <div class="message-area">
-                        <h4>Assigment message</h4>
+                        <h4>Use pointers in C++</h4>
                         <label for="message"></label>
                         <textarea readonly name="msg" id="" msg cols="30" rows="5" class="form-control">THIS IS MY HOMEWORK COMMENT</textarea>
                     </div>
