@@ -91,7 +91,7 @@ public function  getAssignmentsByClassId($classID) {
     }  
 }
 
-public function uploadPfp($pfp,) {
+public function uploadPfp($pfp) {
     $conn = $this->connect();
     $userID = $_SESSION['UserID'];
     
