@@ -38,7 +38,7 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
                 </div>
                 <div class="course-info">
                     <h5>Due Date: <?php echo $ass['isDue'];?></h5>
-                    <a href="../pages/Do-ass.php">
+                    <a href="assiPage-rev.php">
                         <h4> <?php echo $ass['AssignmentName'];?></h4>
                     </a>
                 </div>
