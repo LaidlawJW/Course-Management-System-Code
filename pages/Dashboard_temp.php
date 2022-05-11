@@ -16,7 +16,7 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
     <title>Document</title>
 </head>
 
-<body>
+<body>assiPage-rev.php
     <?php include_once('navigation.php'); ?>
     <div class="col-2">
         <header>
@@ -31,7 +31,7 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
         ?>
             <div class="cardclasses">
                 <h5 style="padding: 0 10px; height: min-content;">Assignment</h5>
-                <a href="StudentclassPage.php">
+                <a href="assiPage-rev.php">
                     <h4>
                     <?php echo $ass['AssignmentName'];?>
                     <?php echo $ass['Points'];?>

@@ -2,8 +2,9 @@
 <?php
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
+
 $classes = $dbCalls->getAssignmentsByUserID($_SESSION['UserID']);
-$assignments = $dbCalls->getAssignmentsByClassID($_GET['classID']);
+//$assignments = $dbCalls->getAssignmentsByClassID($_GET['classID']);
 ?>
 <html lang="en">
 

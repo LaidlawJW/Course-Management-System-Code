@@ -30,7 +30,7 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
         ?>
             <div class="cardclasses">
                 <h5 style="padding: 0 10px; height: min-content;">Class</h5>
-                <a href="StudentclassPage.php">
+                <a href="assiPage-rev.php">
                     <h4>
                     <?php echo $doneA['AssignmentName'];?>
                     <?php echo $doneA['grade'];?>
