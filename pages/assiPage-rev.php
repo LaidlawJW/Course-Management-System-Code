@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+session_start();
+//require_once("../includes/databaseCalls.php");
+//$dbCalls = new DatabaseCalls;
+//$assign = $dbCalls->getassignmentsByClassID($_SESSION['classID']);
+?>
 <head>
     <meta charset="UTF-8">
     <meta charset="UTF-8">
@@ -27,7 +33,9 @@
         <main>
             <div class="form-temp">
                 <form id="form-ass">
-                    <h1 class="class-head">Homework03</h1>
+                    <h1 class="class-head">
+                    C++ Pointers
+                    </h1>
                     <div class="message-area">
                         <h4>Assigment message</h4>
                         <label for="message"></label>
