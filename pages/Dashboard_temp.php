@@ -16,7 +16,7 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
     <title>Document</title>
 </head>
 
-<body>assiPage-rev.php
+<body>
     <?php include_once('navigation.php'); ?>
     <div class="col-2">
         <header>
