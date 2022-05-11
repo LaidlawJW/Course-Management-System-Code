@@ -95,6 +95,20 @@ public function  getAssignmentsByClassId($classID) {
         die($e->getMessage());
     }  
 }
+public function  getAnnByUserID($UserID) {
+    $conn = $this->connect();
+    
+    try {
+        $sql = 
+        "SELECT * 
+        FROM Announcements";
+
+        $result2 = mysqli_query($conn, $sql);
+        return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }  
+}
 
 public function uploadPfp($pfp) {
     $conn = $this->connect();
