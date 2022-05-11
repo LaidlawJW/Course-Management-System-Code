@@ -29,22 +29,30 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
         <?php
         foreach($assign as $ass) {
         ?>
-            <div class="cardclasses">
-                <h5 style="padding: 0 10px; height: min-content;">Assignment</h5>
-                <a href="assiPage-rev.php">
-                    <h4>
-                    <?php echo $ass['AssignmentName'];?>
-                    <?php echo $ass['Points'];?>
-                    <?php echo $ass['isDue'];?>
-
-
-
-                    </h4>
-                </a>
-        </div> 
+       <div class="card">
+                <div class="course-name-science">
+                    <h5>Course</h5>
+                    <a href="StudentclassPage.php">
+                        <h4><?php echo $ass['ClassName'];?></h4>
+                    </a>
+                </div>
+                <div class="course-info">
+                    <h5>Due Date: <?php echo $ass['isDue'];?></h5>
+                    <a href="../pages/Do-ass.php">
+                        <h4> <?php echo $ass['AssignmentName'];?></h4>
+                    </a>
+                </div>
+                <div class="points">
+                    <div class="frame">
+                        <h3>PTS: <span id="PTS"><?php echo $ass['Points'];?></span></h3>
+ 
+                    </div>
+                </div>
+            </div>
         <?php
         }
-        ?> 
+        ?>
+
 
                 <!-- <div class="course-info">
                     <h5>Due Date </span>

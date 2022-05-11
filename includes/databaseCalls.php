@@ -64,10 +64,12 @@ public function getAssignmentsByUserID($userID) {
     
     try {
         $sql = 
-        "SELECT * 
+        " SELECT * 
         FROM assignments
         JOIN users 
         on assignments.UserID = users.UserID
+        JOIN Classes
+        ON assignments.ClassID = Classes.ClassID
         WHERE users.UserID = $userID;";
 
         $result2 = mysqli_query($conn, $sql);
