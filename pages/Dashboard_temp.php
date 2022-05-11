@@ -34,6 +34,11 @@ $assign = $dbCalls->getassignmentsByUserID($_SESSION['UserID']);
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $ass['AssignmentName'];?>
+                    <?php echo $ass['Points'];?>
+                    <?php echo $ass['isDue'];?>
+
+
+
                     </h4>
                 </a>
         </div> 

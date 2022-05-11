@@ -33,6 +33,11 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
                 <a href="StudentclassPage.php">
                     <h4>
                     <?php echo $doneA['AssignmentName'];?>
+                    <?php echo $doneA['grade'];?>
+                    <?php echo $doneA['Points'];?>
+
+
+
                     </h4>
                 </a>
         </div> 

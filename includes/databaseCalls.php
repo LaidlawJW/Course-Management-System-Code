@@ -9,7 +9,7 @@ public function getClassesByUserID($userID) {
         $conn = $this->connect();
 
         $SQLClass = 
-        "SELECT ClassName
+        "SELECT *
         FROM Classes        
         JOIN take
         on classes.UserID = take.UserID
@@ -35,6 +35,23 @@ public function getCompletedAssignmentsByUserID($userID) {
         on assignments.UserID = users.UserID
         WHERE isCompleted = 1
         AND users.UserID = $userID;";
+
+        $result2 = mysqli_query($conn, $sql);
+        return mysqli_fetch_all($result2, MYSQLI_ASSOC);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+public function getUserTypeByUserID($userID) {
+    $conn = $this->connect();
+    
+    try {
+        $sql = 
+        "SELECT type 
+        FROM users
+        JOIN classes 
+        on users.UserID = classes.UserID
+        WHERE users.UserID = $userID;";
 
         $result2 = mysqli_query($conn, $sql);
         return mysqli_fetch_all($result2, MYSQLI_ASSOC);

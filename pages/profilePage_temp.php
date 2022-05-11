@@ -3,6 +3,7 @@
 require_once("../includes/databaseCalls.php");
 $dbCalls = new DatabaseCalls;
 
+
 $classes = $dbCalls->getClassesByUserID($_SESSION['UserID']);
  ?>
 <html lang="en">
@@ -64,8 +65,12 @@ $classes = $dbCalls->getClassesByUserID($_SESSION['UserID']);
             foreach($classes as $class) {
             ?>
                 <tr>
-                    <td><a href="StudentclassPage.php"><?php echo $class['ClassName'];?></a></td>
-                    <td>Student</td>
+                    <td><a href="StudentclassPage.php">
+                    <?php echo $class['ClassName'];?>
+                </a></td>
+                    <td>
+                    <?php echo $class['type'];?>
+                    </td>
                 </tr>
 
                         
