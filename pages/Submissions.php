@@ -34,7 +34,7 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
                 <div class="course-name-science">
                     <h5>Course</h5>
                     <a href="StudentclassPage.php">
-                        <h4><?php echo $ass['AssignmentName'];?></h4>
+                        <h4><?php echo $ass['ClassName'];?></h4>
                     </a>
                 </div>
                 <div class="course-info">

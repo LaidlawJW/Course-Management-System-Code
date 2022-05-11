@@ -33,8 +33,11 @@ public function getCompletedAssignmentsByUserID($userID) {
         FROM assignments
         JOIN users 
         on assignments.UserID = users.UserID
-        WHERE isCompleted = 1
-        AND users.UserID = $userID;";
+        JOIN Classes
+        ON assignments.ClassID = Classes.ClassID
+         WHERE isCompleted = 1
+        AND users.UserID
+        = $userID;";
 
         $result2 = mysqli_query($conn, $sql);
         return mysqli_fetch_all($result2, MYSQLI_ASSOC);
