@@ -21,7 +21,7 @@ $doneAss = $dbCalls->getCompletedAssignmentsByUserID($_SESSION['UserID']);
     <div class="col-2">
         <header>
             <h2>Current Date: <span id='date'></span></h2>
-            <h2>Dashboard</h2>
+            <h2>Submissions</h2>
             <h2>Hello <span id='user'><?php echo $_SESSION["uname"];?></span>!</h2>
         </header>
         <main class="cards">
